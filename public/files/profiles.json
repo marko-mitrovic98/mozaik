@@ -1,0 +1,38 @@
+[
+    {
+        "id": "st-310",
+        "name": "ST 310",
+        "category": "Stepenisni profil",
+        "manufacturer": "Europrofil",
+        "size": "3m",
+        "description": "Ovo profil",
+        "colors": ["srebro mat","srebro sjaj","crna","bronza mat","bronza mat","zlato mat"],
+        "price": "1150",
+        "cardPicture": "/assets/profili/h/h/310.png",
+        "pictures": ["/assets/profili/h/h/310.png"]
+    },
+    {
+        "id": "st-320",
+        "name": "ST 320",
+        "category": "Stepenisni profil",
+        "manufacturer": "Europrofil",
+        "size": "2.7m",
+        "description": "Ovo profil",
+        "colors": ["srebro mat","srebro sjaj","crna","bronza mat","bronza mat","zlato mat"],
+        "price": "900",
+        "cardPicture": "/assets/profili/h/h/320.png",
+        "pictures": ["/assets/profili/h/h/320.png"]
+    },
+    {
+        "id": "lvn-3587",
+        "name": "LVN 3587",
+        "category": "Profil za visinksu razliku",
+        "manufacturer": "Europrofil",
+        "size": "2.7m",
+        "description": "Ovo profil",
+        "colors": ["srebro mat","srebro sjaj","crna","bronza mat","bronza mat","zlato mat"],
+        "price": "750",
+        "cardPicture": "/assets/profili/b/b/3587-1.png",
+        "pictures": ["/assets/profili/b/3587-1.jpg", "/assets/profili/b/3587-2.jpg", "/assets/profili/b/3587-3.jpg", "/assets/profili/b/3587-4.jpg", "/assets/profili/b/3587-5.jpg"]
+    }
+]

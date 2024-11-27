@@ -1,0 +1,36 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'commons' as *;
+
+.container {
+    width: 100%;
+    max-width: 1352px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+$columns: 12;
+$column-base-width: calc(100% / $columns);
+
+[class*='col-'] {
+    min-height: 1px;
+    width: $column-base-width;
+    padding: 12px;
+}
+
+@for $i from 1 through $columns {
+    .col-#{$i} {
+        width: $column-base-width * $i;
+    }
+}
+
+@media (max-width: $md) {
+    [class*='col-'] {
+        width: 100%;
+    }
+}

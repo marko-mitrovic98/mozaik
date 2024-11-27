@@ -1,0 +1,230 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'commons' as *;
+@use 'grid' as *;
+.section-shop {
+    .container {
+        padding: 0;
+        min-height: $section-height;
+        .row {
+            margin: 20px;
+        }
+
+        .col-4 {
+            background-color: $primary-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                @include font($raleway, 40px, 400);
+                text-transform: uppercase;
+            }
+        }
+
+        .col-8 {
+            padding: 0;
+        }
+
+        div[class^='image-'] {
+            height: 20vh;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .image-ceramic-tiles {
+            background-image: url(/assets/baner_keramika.png);
+        }
+
+        .image-profiles {
+            background-image: url(/assets/baner-profil.jpg);
+        }
+
+        .image-garrison {
+            background-image: url(/assets/baner_garnisne.jpg);
+        }
+
+        .image-materials {
+            background-image: url(/assets/baner_materijali.jpg);
+        }
+
+        .image-doors {
+            background-image: url(/assets/baner_vrata.jpg);
+        }
+
+        .image-laminate {
+            background-image: url(/assets/baner_laminat.jpg);
+        }
+
+        .filter-rwd {
+            display: none;
+            cursor: pointer;
+
+            h1 {
+                background-color: $secondary-color;
+                color: $primary-color;
+                @include font($raleway, 25px, 400);
+                text-transform: uppercase;
+                padding: 10px;
+            }
+
+            @media (max-width: $md) {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        .filter {
+            width: 20%;
+
+            h1 {
+                background-color: $secondary-color;
+                color: $primary-color;
+                @include font($raleway, 25px, 400);
+                text-transform: uppercase;
+                padding: 10px;
+            }
+
+            h2 {
+                background-color: gainsboro;
+                color: $secondary-color;
+                @include font($raleway, 18px, 400);
+                padding: 10px 5px;
+            }
+
+            .checkbox-label {
+                cursor: pointer;
+                display: block;
+                margin-top: 5px;
+
+                input {
+                    appearance: none;
+                    cursor: pointer;
+                    display: inline-block;
+                    position: relative;
+                    height: 24px;
+                    aspect-ratio: 1 / 1;
+                    background-color: #eee;
+                    transform: translateY(5px);
+
+                    &:checked::after {
+                        content: '';
+                        height: 24px;
+                        aspect-ratio: 1 / 1;
+                        background-color: $primary-color;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        position: absolute;
+                    }
+                }
+
+                span {
+                    @include font($open-sans, 16px, normal);
+                    color: $secondary-color;
+                }
+
+                &:hover {
+                    span {
+                        transition: 0.3s;
+                        color: $primary-color;
+                    }
+
+                    input {
+                        transition: 0.3s;
+                        background-color: #d1d1d1;
+                    }
+                }
+            }
+
+            li:last-child {
+                margin-bottom: 10px;
+            }
+
+            @media (max-width: $md) {
+                display: none;
+            }
+        }
+
+        .product-list {
+            width: 80%;
+
+            .row-sort {
+                justify-content: flex-end;
+            }
+
+            .sort {
+                label {
+                    @include font($open-sans, 18px, 300);
+                }
+
+                select {
+                    border: 1px solid $primary-color;
+                    border-radius: 10px;
+                    padding: 5px;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                
+                .item {
+                    margin: 0 15px 40px 15px;
+                    width: 300px;
+                    height: 500px;
+                    box-shadow: 0px 5px 10px 2px #c5c5c5;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    
+    
+                    &:hover {
+                        box-shadow: 0px 5px 10px 2px $primary-color;
+                        .item-image {
+                            transition: 0.3s;
+                            background-color: $primary-color;
+                        }
+                    }
+    
+                    .item-image {
+                        width: 300px;
+                        height: 300px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img {
+                            max-width: 300px;
+                            max-height: 300px;
+                        }
+                    }
+    
+                    .item-title {
+                        padding: 10px 0;
+                        border-top: 2px solid $primary-color;
+    
+                        h2 {
+                            @include font($raleway, 25px, 500);
+                            color: $primary-color;
+                            text-transform: uppercase;
+                            margin-left: 5px;
+                        }
+                    }
+    
+                    .item-description {
+                        margin-left: 5px;
+                        @include font($open-sans, 18px, 400);
+                        color: $secondary-color;
+                        text-transform: uppercase;
+                    }
+    
+                    .item-price {
+                        margin-top: 10px;
+                        margin-left: 5px;
+                        @include font($open-sans, 35px, 700);
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}

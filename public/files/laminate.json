@@ -1,0 +1,74 @@
+[
+    {
+        "id": "laminat-6010",
+        "name": "6010",
+        "category": "Laminat",
+        "manufacturer": "Pinoles",
+        "size": "6mm",
+        "description": "Ovo laminat",
+        "colors": ["hrast"],
+        "price": "2000",
+        "cardPicture": "/assets/laminat/6010.jpg",
+        "pictures": ["/assets/laminat/6010.jpg", "/assets/laminat/6010a.jpg"]
+    },
+    {
+        "id": "laminat-6013",
+        "name": "6013",
+        "category": "Laminat",
+        "manufacturer": "Pinoles",
+        "size": "7mm",
+        "description": "Ovo laminat",
+        "colors": ["hrast"],
+        "price": "2300",
+        "cardPicture": "/assets/laminat/6013.jpg",
+        "pictures": ["/assets/laminat/6013.jpg", "/assets/laminat/6013a.webp"]
+    },
+    {
+        "id": "laminat-6014",
+        "name": "6014",
+        "category": "Laminat",
+        "manufacturer": "Pinoles",
+        "size": "8mm",
+        "description": "Ovo laminat",
+        "colors": ["hrast"],
+        "price": "2000",
+        "cardPicture": "/assets/laminat/6014.jpg",
+        "pictures": ["/assets/laminat/6014.jpg", "/assets/laminat/6014a.webp"]
+    },
+    {
+        "id": "laminat-7011",
+        "name": "7011",
+        "category": "Laminat",
+        "manufacturer": "Pinoles",
+        "size": "10mm",
+        "description": "Ovo laminat",
+        "colors": ["hrast"],
+        "price": "3000",
+        "cardPicture": "/assets/laminat/7011.jpg",
+        "pictures": ["/assets/laminat/7011.jpg", "/assets/laminat/7011a.jpg"]
+    },
+    {
+        "id": "laminat-7020",
+        "name": "7020",
+        "category": "Laminat",
+        "manufacturer": "Pinoles",
+        "size": "10mm",
+        "description": "Ovo laminat",
+        "colors": ["hrast"],
+        "price": "3000",
+        "cardPicture": "/assets/laminat/7020.webp",
+        "pictures": ["/assets/laminat/7020.webp", "/assets/laminat/7020a.jpg"]
+    },
+    {
+        "id": "laminat-10019",
+        "name": "10019",
+        "category": "Laminat",
+        "manufacturer": "Pinoles",
+        "size": "12mm",
+        "description": "Ovo laminat",
+        "colors": ["hrast"],
+        "price": "4000",
+        "cardPicture": "/assets/laminat/10019.jpg",
+        "pictures": ["/assets/laminat/10019.jpg", "/assets/laminat/10019a.jpg"]
+    }    
+]

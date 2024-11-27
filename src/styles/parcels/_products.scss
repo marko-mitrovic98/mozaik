@@ -1,0 +1,154 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'commons' as *;
+@use 'grid' as *;
+.section-products {
+    background-color: $primary-color;
+    .container {
+        width: 100vw;
+        max-width: 100%;
+        height: $section-height;
+        padding: 0;
+
+        .row {
+            height: 50%;
+        }
+
+        .col-4 {
+            position: relative;
+            padding: 0;
+        }
+
+        div[class^='card-'] {
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            transition: 0.3s;
+
+            h1 {
+                text-transform: uppercase;
+                @include font($raleway, 40px, 800);
+                @include stroke($third-color, $primary-color);
+                letter-spacing: 2px;
+                margin: 5px;
+                z-index: 1;
+
+                @media (max-width:$lg) {
+                    font-size: 24px;
+                }
+            }
+
+            span {
+                opacity: 0;
+                color: $third-color;
+                @include font($raleway, 14px, 300);
+                text-align: center;
+                letter-spacing: 1px;
+                margin: 5px;
+                transform: translateY(300%);
+                transition: 0.6s;
+                z-index: 1;                
+
+                @media (max-width:$lg) {
+                    opacity: 1;
+                    transform: translateY(0%);
+                }
+            }
+            
+            .btn {
+                opacity: 0;
+                transform: translateY(300%);
+                margin: 5px 0;
+                transition: transform 0.6s, background-color 0.3s;
+                z-index: 1;
+
+                @media (max-width:$lg) {
+                    opacity: 1;
+                    transform: translateY(0%);
+                    font-size: 12px;
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-color: $secondary-color;
+                top: 0;
+                left: 0;
+                opacity: 0.5;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-color: $primary-color;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition: 0.6s;
+
+                @media (max-width:$lg) {
+                    opacity: 0;
+                }
+            }
+
+            &:hover {
+                .btn,
+                span {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+
+                &::after {
+                    opacity: 0.9;
+
+                    @media (max-width:$lg) {
+                        opacity: 0;
+                    }
+                }
+            }
+
+            @media (max-width:$md) {
+                height: 33vh;
+            }
+        }
+
+        .card-ceramic-tiles {
+            background-image: url(/assets/section_keramika.png);
+        }
+
+        .card-profiles {
+            background-image: url(/assets/section_profili.jpg);
+        }
+
+        .card-garrison {
+            background-image: url(/assets/section_garnisne.jpg);
+        }
+
+        .card-materials {
+            background-image: url(/assets/section_materijali.jpg);
+        }
+
+        .card-doors {
+            background-image: url(/assets/section_doors.jpg);
+        }
+
+        .card-laminate {
+            background-image: url(/assets/section_laminat.jpg);
+        }
+
+        @media (max-width:$md) {
+            height: auto;
+        }
+    }
+}

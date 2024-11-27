@@ -1,0 +1,38 @@
+[
+    {
+        "id": "af1",
+        "name": "AF1 Natur Hrast",
+        "category": "Linija Akrilni Furnir",
+        "manufacturer": "Braca Maric",
+        "size": "",
+        "description": "Ovo su vrata.",
+        "colors": ["hrast"],
+        "price": "34 000",
+        "cardPicture": "/assets/vrata/vrata_card/af1.png",
+        "pictures": ["/assets/vrata/af1.png"]
+    },
+    {
+        "id": "v8",
+        "name": "V8 Beljeni hrast",
+        "category": "Druga linija",
+        "manufacturer": "Braca Maric",
+        "size": "",
+        "description": "Ovo su vrata.",
+        "colors": ["hrast"],
+        "price": "30 000",
+        "cardPicture": "/assets/vrata/vrata_card/v8.png",
+        "pictures": ["/assets/vrata/v8.png"]
+    },
+    {
+        "id": "eco-1",
+        "name": "ECO 1",
+        "category": "ECO linija",
+        "manufacturer": "Braca Maric",
+        "size": "",
+        "description": "Ovo su vrata.",
+        "colors": ["braon"],
+        "price": "37 000",
+        "cardPicture": "/assets/vrata/vrata_card/eco1.png",
+        "pictures": ["/assets/vrata/eco1.png"]
+    }
+]

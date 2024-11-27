@@ -1,0 +1,109 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'commons' as *;
+@use 'grid' as *;
+
+$header-height: 8vh;
+$header-font-size: 13px;
+.header {
+    position: sticky;
+    top: 0;
+    box-shadow: 0 3px 6px #00000029;
+    background-color: $primary-color;
+    color: $third-color;
+    z-index: 999;
+    height: $header-height;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100vw;
+
+        .menu-logo {
+            img {
+                max-width: $header-height;
+                aspect-ratio: 1/1;
+            }
+            cursor: pointer;
+            @media (max-width: $lg) {
+                display: none;
+            }
+        }
+
+        nav {
+            display: flex;
+            @media (max-width: $lg) {
+                flex-direction: column;
+                align-items: start;
+            }
+
+            .menu {
+                display: flex;
+    
+                a {
+                    padding: calc((($header-height) - ($header-font-size)) / 2);
+                    @include font($raleway, $header-font-size, bold);
+                    text-decoration: none;
+                    letter-spacing: 2.5px;
+                    color: $secondary-color;
+                    text-transform: uppercase;
+                    transition: color 0.3s;
+    
+                    &:hover {
+                        color: $third-color;
+                        border-bottom: 4px solid $third-color;
+                        padding-bottom: calc((($header-height) - ($header-font-size)) / 2 - 4px);
+                    }                
+                }
+    
+                @media (max-width: $lg) {
+                    display: none;
+                    flex-direction: column;
+                    width: 100%;
+                    background-color: $primary-color;
+                    position: absolute;
+                    top: 8vh;
+                    left: 0;
+                    text-align: center;  
+                    padding: 20px;    
+                    
+                    li {
+                        margin: 20px 0;
+                        padding: calc((($header-height) - ($header-font-size)) / 2);
+                        border-bottom: 2px solid $secondary-color;
+
+                        &:hover {
+                            border-bottom: 2px solid $third-color;
+                        }
+                    }
+
+                    a:hover {
+                        border: 0px;
+                    }
+                }
+    
+                
+            }
+
+            .open {
+                display: flex;
+            }
+        }
+
+        .menu-icon {
+            display: none;
+
+            @media (max-width: $lg) {
+                display: inline-block;
+                color: $third-color;
+                cursor: pointer;
+
+                .fa-bars {
+                    width: 30px;
+                    height: $header-height;
+                }
+            }
+        }
+    }
+}

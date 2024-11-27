@@ -1,0 +1,51 @@
+[
+    {
+        "id": "pvc-2k-maska",
+        "name": "PVC 2k Maska",
+        "category": "Garnisna",
+        "manufacturer": "Europrofil",
+        "size": "1m",
+        "description": "Ovo je garnisna",
+        "colors": ["bela"],
+        "price": "1150",
+        "cardPicture": "/assets/garnisne/card/2k-maska-alu-bela.png",
+        "pictures": ["/assets/garnisne/2k-maska-alu-bela.jpg", "/assets/garnisne/2k-maska-alu-bela-sema.jpg"]
+    },
+    {
+        "id": "gar-carli",
+        "name": "CArli",
+        "category": "Garnisna",
+        "manufacturer": "Europrofil",
+        "size": "4m",
+        "description": "Ovo je garnisna",
+        "colors": ["bela", "crna", "zlato", "srebro"],
+        "price": "1900",
+        "cardPicture": "/assets/garnisne/card/gar-carli.png",
+        "pictures": [
+            "/assets/garnisne/gar-carli (1).jpg",
+            "/assets/garnisne/gar-carli (2).jpg",
+            "/assets/garnisne/gar-carli (3).jpg",
+            "/assets/garnisne/gar-carli (4).jpg",
+            "/assets/garnisne/gar-carli (5).jpg",
+            "/assets/garnisne/gar-carli (6).jpg",
+            "/assets/garnisne/gar-carli (7).jpg",
+            "/assets/garnisne/gar-carli (8).jpg"
+        ]
+    },
+    {
+        "id": "z5i",
+        "name": "Zavrsetak 5",
+        "category": "zavrsetak",
+        "manufacturer": "Europrofil",
+        "size": "",
+        "description": "Ovo je garnisna",
+        "colors": ["bela", "zlato", "srebro"],
+        "price": "250",
+        "cardPicture": "/assets/garnisne/card/z5i.png",
+        "pictures": [
+            "/assets/garnisne/z5i.jpg",
+            "/assets/garnisne/z5a.jpg",
+            "/assets/garnisne/z5cz.jpg"
+        ]
+    }
+]

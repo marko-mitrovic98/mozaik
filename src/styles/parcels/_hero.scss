@@ -1,0 +1,59 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'commons' as *;
+@use 'grid' as *;
+.section-hero {
+    background-color: $secondary-color;
+    .container {
+        height: $section-height;
+        max-width: 100%;
+
+        .col-6 {
+            display: flex;
+
+            @media (max-width: $lg) {
+                height: 100%;
+                padding-top: 62px;
+            }
+        }
+
+        .hero-content {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h1 {
+                @include font($raleway, 60px, bold);
+                text-transform: uppercase;                
+            }
+            
+            .first-h {
+                    @include stroke($secondary-color, $third-color)
+                }
+            .second-h {
+                color: $primary-color
+            }    
+
+            h2 {
+                @include font($raleway, 35px,bold);
+                text-transform: uppercase;
+                color: $primary-color;
+
+            }
+
+            h3 {
+                @include font($raleway, 25px, 300)
+            }
+        }
+
+        .hero-banner {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@mixin font($font, $font-size, $font-weight) {
+    font-family: $font;
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+
+@mixin stroke($color, $stroke-color) {
+    color: $color;
+    text-shadow: -1px -1px 0 $stroke-color, 1px -1px 0 $stroke-color, -1px 1px 0 $stroke-color, 1px 1px 0 $stroke-color;
+}

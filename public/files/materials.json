@@ -1,0 +1,38 @@
+[
+    {
+        "id": "keramol-flex",
+        "name": "Keramol Flex 3+1",
+        "category": "Lepak",
+        "manufacturer": "Maxima",
+        "size": "25kg",
+        "description": "Ovo lepak",
+        "colors": [],
+        "price": "3900",
+        "cardPicture": "/assets/materijali/keramol_f.jpg",
+        "pictures": ["/assets/materijali/keramol_f.jpg"]
+    },
+    {
+        "id": "keracolor-ff",
+        "name": "Fuga Keracolor ff",
+        "category": "Fugomal",
+        "manufacturer": "Mapei",
+        "size": "2kg",
+        "description": "Ovo materijal",
+        "colors": ["bahama"],
+        "price": "750",
+        "cardPicture": "/assets/materijali/keracolor.png",
+        "pictures": ["/assets/materijali/keracolor.png", "/assets/materijali/keracolor_boje.png"]
+    },
+    {
+        "id": "Hidromax-liquid-foil",
+        "name": "HIDROMAX LIQUID FOIL",
+        "category": "Hidroizolacija",
+        "manufacturer": "Maxima",
+        "size": "5kg",
+        "description": "Ovo materijal",
+        "colors": [],
+        "price": "2400",
+        "cardPicture": "/assets/materijali/hidromax.png",
+        "pictures": ["/assets/materijali/hidromax.png"]
+    }
+]
