@@ -10,6 +10,7 @@ export const ProductPage = () => {
     const [increment,SetIncrement] = useState(0);
     const path = `/files/${shop}.json`;
     const [product, setProduct] = useState(null);
+    const [text, setText] = useState('');
 
     useEffect(() => {        
         const fetchProductData = async () => {
@@ -17,9 +18,14 @@ export const ProductPage = () => {
                 const response = await fetch(path);
                 const data = await response.json();
                 const selectedProduct = data.find((p) => p.id === id);
-
+                
                 setProduct(selectedProduct);
                 setLoading(false);
+                const textFilePath = selectedProduct.description;
+                const textResponse = await fetch(`/files/descriptions/${textFilePath}.txt`);
+                const textContent = await textResponse.text();
+
+                setText(textContent);                
             } catch (error) {
                 console.error('Error loading Json file', error);
                 setLoading(false);
@@ -27,7 +33,6 @@ export const ProductPage = () => {
         };
 
         fetchProductData();
-        
     }, [id, shop]);
 
     const handlePlus = () =>{
@@ -78,7 +83,7 @@ export const ProductPage = () => {
                                         <h3>{product.price}.00</h3>
                                         <h4>Opis proizvoda</h4>
                                         <p>
-                                            {product.description}
+                                            {text}
                                         </p>
                                         <h4>Boje:</h4>
                                         <ul>

@@ -1,28 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-export const ShopItem = ({productType}) => {
-    const path = `/files/${productType}.json`
-    const [items, setItems] = useState([]);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch(path);
-                const data = await response.json();
-
-                setItems(data);
-            } catch (error) {
-                console.error('Error loading Json file', error);
-            }
-        };
-
-        fetchData();
-    }, []);
-
-    console.log(items);
+export const ShopItem = ({productType, products}) => {  
+    
     return (
         <>
-            {items.map((item, index) => (
+            {products.length > 0 ? (
+                <>
+                {products.map((item, index) => (
                  <a href={`/${productType}/${item.id}`}>
                     <div className="item" key={index}>
                     <div className="item-image">
@@ -34,7 +18,7 @@ export const ShopItem = ({productType}) => {
                         </h2>
                     </div>
                     <div className="item-description">
-                        <p>{item.manufacturer}</p>
+                        <p>{item.manufacturer} - {item.category}</p>
                     </div>
                     <div className="item-price">
                         <h2>{item.price}.00</h2>
@@ -42,6 +26,9 @@ export const ShopItem = ({productType}) => {
                 </div>
                  </a>
             ))}
+                </>
+            ) : (<div></div>)}
+            
         </>
     );
 };

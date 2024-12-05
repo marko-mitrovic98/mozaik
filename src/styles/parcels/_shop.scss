@@ -123,6 +123,8 @@
                 span {
                     @include font($open-sans, 16px, normal);
                     color: $secondary-color;
+                    margin-left: 5px;
+                    text-transform: capitalize;
                 }
 
                 &:hover {
@@ -147,24 +149,42 @@
             }
         }
 
+        .row-sort {
+            display: flex;
+            justify-content:space-between;
+        }
+
+        .searchBar {
+            display: flex;
+
+            input {
+                width: 350px;
+                max-width: 400px;
+                border: 1px solid $primary-color;
+                border-radius: 10px;
+                padding: 5px;
+                margin-bottom: 5px;
+            }
+        }
+
+        .sort {           
+            label {
+                @include font($open-sans, 18px, 300);
+            }
+
+            select {
+                border: 1px solid $primary-color;
+                border-radius: 10px;
+                padding: 5px;
+            }
+        }
+
         .product-list {
             width: 80%;
 
-            .row-sort {
-                justify-content: flex-end;
-            }
-
-            .sort {
-                label {
-                    @include font($open-sans, 18px, 300);
-                }
-
-                select {
-                    border: 1px solid $primary-color;
-                    border-radius: 10px;
-                    padding: 5px;
-                }
-            }
+            .row {
+                margin-top: 0;
+            }            
 
             a {
                 text-decoration: none;

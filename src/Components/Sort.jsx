@@ -1,17 +1,19 @@
 import React from 'react';
 
-export const Sort = () => {
+export const Sort = ({ searchQuery, onSearchChange, sortOption, onSortChange }) => {
     return (
         <>
             <div className="row row-sort">
+                <div className="searchBar">
+                    <input type="text" placeholder="Pretrazi proizvode..." value={searchQuery} onChange={(e) => onSearchChange(e.target.value)} />
+                </div>
                 <div className="sort">
-                    <label for="sort">Sortiraj po:</label>
-                    <select name="sort" id="sort">
+                    <label>Sortiraj po:</label>
+                    <select name="sort" id="sort" value={sortOption} onChange={(e) => onSortChange(e.target.value)}>
                         <option value="default">Default</option>
-                        <option value="ascending">Po ceni rastuce</option>
-                        <option value="descending">Po ceni smanjujuce</option>
+                        <option value="price-asc">Po ceni rastuce</option>
+                        <option value="price-desc">Po ceni smanjujuce</option>
                         <option value="title">Po naslovu</option>
-                        <option value="proizvodjacu">Po proizvodjacu</option>
                     </select>
                 </div>
             </div>

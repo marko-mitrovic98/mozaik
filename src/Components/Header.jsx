@@ -3,9 +3,14 @@ import { Link } from 'react-router-dom';
 
 export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [dropMenuOpen, setDropMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+    };
+
+    const toggleDropMenu = () => {
+        setDropMenuOpen(!isMenuOpen);
     };
 
     return (
@@ -21,21 +26,20 @@ export const Header = () => {
                     <nav>
                     <ul className={`menu ${isMenuOpen ? 'open' : ''}`}>
                         <li>
-                            <Link to="/">Pocetna</Link>
+                            <Link to="/" className='navLink'>Pocetna</Link>
                         </li>
                         <li>
-                            <a href="/#section-products">Proizvodi</a>
-                        </li>
-                        <li>
-                            <a href="/#section-services">Usluge</a>
-                        </li>
-                        {/* <li><a href="">Blog</a></li> */}
-                        <li>
-                            <a href="/#section-about">O Nama</a>
-                        </li>
-                        <li>
-                            <a href="/#section-contact">Kontakt</a>
-                        </li>
+                            <a className='navLink' onClickCapture={toggleDropMenu}>Proizvodi</a>
+                            <ul className={`dropdownMenu ${dropMenuOpen ? 'dropdownOpen' : ''}`}>
+                                <li><a href="/ceramic-tiles">Keramika</a></li>
+                                <li><a href="/profiles">profili</a></li>
+                                <li><a href="/garrison">garnisne</a></li>
+                                <li><a href="/materials">materijali</a></li>
+                                <li><a href="/doors">vrata</a></li>
+                                <li><a href="/laminate">laminat</a></li>
+                            </ul>
+                        </li>                        
+                        <li><a href="" className='navLink'>Blog</a></li>                        
                     </ul>
                     </nav>
                 </div>

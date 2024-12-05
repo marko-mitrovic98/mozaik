@@ -33,6 +33,7 @@ $header-font-size: 13px;
 
         nav {
             display: flex;
+
             @media (max-width: $lg) {
                 flex-direction: column;
                 align-items: start;
@@ -41,7 +42,7 @@ $header-font-size: 13px;
             .menu {
                 display: flex;
     
-                a {
+                .navLink {
                     padding: calc((($header-height) - ($header-font-size)) / 2);
                     @include font($raleway, $header-font-size, bold);
                     text-decoration: none;
@@ -54,6 +55,7 @@ $header-font-size: 13px;
                         color: $third-color;
                         border-bottom: 4px solid $third-color;
                         padding-bottom: calc((($header-height) - ($header-font-size)) / 2 - 4px);
+                        cursor: pointer;
                     }                
                 }
     
@@ -87,6 +89,36 @@ $header-font-size: 13px;
             }
 
             .open {
+                display: flex;
+            }
+
+            .dropdownMenu {
+                position: absolute;
+                background-color: $secondary-color;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                top: $header-height;
+                transform: translateX(-25px);
+                padding: 10px;
+
+                a {
+                    text-transform: uppercase;
+                    @include font($raleway, 20px, 300);
+                    line-height: 35px;
+                    text-decoration: none;
+                    letter-spacing: 2.5px;
+                    color: $third-color;
+                    padding: 10px 25px;
+                    transition: 0.3s;                    
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+
+            .dropdownOpen {
                 display: flex;
             }
         }

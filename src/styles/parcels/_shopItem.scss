@@ -86,6 +86,7 @@
             h2 {
                 @include font($raleway, 25px, 600);
                 color: grey;
+                text-transform: uppercase;
             }
 
             .product-path {
@@ -110,8 +111,10 @@
             }
 
             p {
-                @include font($open-sans, 16px, 600);
-                color: gray;
+                @include font($open-sans, 16px, 400);
+                letter-spacing: 0.5px;
+                line-height: 18px;
+                color: $secondary-color;
             }
 
             li {
