@@ -10,10 +10,10 @@ export const Sort = ({ searchQuery, onSearchChange, sortOption, onSortChange }) 
                 <div className="sort">
                     <label>Sortiraj po:</label>
                     <select name="sort" id="sort" value={sortOption} onChange={(e) => onSortChange(e.target.value)}>
-                        <option value="default">Default</option>
-                        <option value="price-asc">Po ceni rastuce</option>
-                        <option value="price-desc">Po ceni smanjujuce</option>
-                        <option value="title">Po naslovu</option>
+                        <option value="default">default</option>
+                        <option value="price-asc">ceni rastuce</option>
+                        <option value="price-desc">ceni opadajuce</option>
+                        <option value="title">naslovu</option>
                     </select>
                 </div>
             </div>

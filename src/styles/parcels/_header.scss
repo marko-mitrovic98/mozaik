@@ -3,137 +3,130 @@
 @use 'commons' as *;
 @use 'grid' as *;
 
-$header-height: 8vh;
-$header-font-size: 13px;
-.header {
-    position: sticky;
-    top: 0;
-    box-shadow: 0 3px 6px #00000029;
+.navbar {
     background-color: $primary-color;
-    color: $third-color;
-    z-index: 999;
-    height: $header-height;
+    color: $secondary-color;
+    padding: 10px 20px;
+    position: sticky;
+    width: 100%;
+    z-index: 1000;
 
-    .container {
+    .navbar-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width: 100vw;
 
-        .menu-logo {
+        .navbar-logo {
             img {
-                max-width: $header-height;
-                aspect-ratio: 1/1;
-            }
-            cursor: pointer;
-            @media (max-width: $lg) {
-                display: none;
+                width: 50px;
+                height: 50px;
             }
         }
 
-        nav {
-            display: flex;
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
 
             @media (max-width: $lg) {
-                flex-direction: column;
-                align-items: start;
+                display: flex;
             }
 
-            .menu {
-                display: flex;
-    
-                .navLink {
-                    padding: calc((($header-height) - ($header-font-size)) / 2);
-                    @include font($raleway, $header-font-size, bold);
-                    text-decoration: none;
-                    letter-spacing: 2.5px;
-                    color: $secondary-color;
-                    text-transform: uppercase;
-                    transition: color 0.3s;
-    
-                    &:hover {
-                        color: $third-color;
-                        border-bottom: 4px solid $third-color;
-                        padding-bottom: calc((($header-height) - ($header-font-size)) / 2 - 4px);
-                        cursor: pointer;
-                    }                
+            span {
+                display: block;
+                height: 3px;
+                width: 25px;
+                background-color: white;
+            }
+
+            &.open {
+                span:nth-child(2) {
+                    opacity: 0;
                 }
-    
-                @media (max-width: $lg) {
-                    display: none;
-                    flex-direction: column;
-                    width: 100%;
-                    background-color: $primary-color;
+
+                span:nth-child(1) {
+                    transform: rotate(45deg) translateY(11px);
+                }
+
+                span:nth-child(3) {
+                    transform: rotate(-45deg) translateY(-11px);
+                }
+            }
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+
+            @media (max-width: $lg) {
+                display: none;
+            }
+
+            .navLink {
+                @include font($open-sans, 16px, 600);
+                text-transform: uppercase;
+                text-decoration: none;
+                letter-spacing: 2.5px;
+                color: $secondary-color;
+                padding: 0 10px;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: $third-color;
+                    border-bottom: 4px solid $third-color;
+                    padding-bottom: 20px;
+                }
+            }
+
+            .dropdown {
+                position: relative;
+
+                .dropdown-menu {
                     position: absolute;
-                    top: 8vh;
+                    top: 42px;
                     left: 0;
-                    text-align: center;  
-                    padding: 20px;    
-                    
-                    li {
-                        margin: 20px 0;
-                        padding: calc((($header-height) - ($header-font-size)) / 2);
-                        border-bottom: 2px solid $secondary-color;
+                    background-color: $secondary-color;
+                    border:  1px solid $third-color;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 20px;
+                    gap: 25px;
+                    z-index: 100;
+
+                    a {
+                        @include font($open-sans, 16px, 600);
+                        color: white;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        padding: 10px;
+                        transition: 0.2s;
 
                         &:hover {
-                            border-bottom: 2px solid $third-color;
+                            color: $primary-color;
                         }
                     }
-
-                    a:hover {
-                        border: 0px;
-                    }
                 }
-    
-                
             }
 
-            .open {
+            &.mobile {
                 display: flex;
-            }
-
-            .dropdownMenu {
-                position: absolute;
-                background-color: $secondary-color;
-                display: none;
                 flex-direction: column;
-                align-items: center;
-                top: $header-height;
-                transform: translateX(-25px);
-                padding: 10px;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #333;
+                padding: 20px;
+
+                @media (max-width: $lg) {
+                    display: flex;
+                }
 
                 a {
-                    text-transform: uppercase;
-                    @include font($raleway, 20px, 300);
-                    line-height: 35px;
-                    text-decoration: none;
-                    letter-spacing: 2.5px;
-                    color: $third-color;
-                    padding: 10px 25px;
-                    transition: 0.3s;                    
-
-                    &:hover {
-                        color: $primary-color;
-                    }
-                }
-            }
-
-            .dropdownOpen {
-                display: flex;
-            }
-        }
-
-        .menu-icon {
-            display: none;
-
-            @media (max-width: $lg) {
-                display: inline-block;
-                color: $third-color;
-                cursor: pointer;
-
-                .fa-bars {
-                    width: 30px;
-                    height: $header-height;
+                    padding: 10px 0;
                 }
             }
         }
