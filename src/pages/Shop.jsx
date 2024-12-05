@@ -12,7 +12,8 @@ export const Shop = () => {
     const [selectedColors, setSelectedColors] = useState([]);
     const [selectedSizes, setSelectedSizes] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
-    const [sortOption, setSortOption] = useState("default");
+    const [debouncedSearchQuery, setDebouncedSearchQuery] = useState('');
+    const [sortOption, setSortOption] = useState('default');
     const params = useParams();
     let title = '';
 
@@ -35,7 +36,13 @@ export const Shop = () => {
         };
 
         fetchData();
-    }, []);
+
+        const handler = setTimeout(() => {
+            setDebouncedSearchQuery(searchQuery);
+        }, 500);
+
+        return () => clearTimeout(handler);
+    }, [searchQuery]);
 
     switch (params.shop) {
         case 'ceramic-tiles':
@@ -74,7 +81,7 @@ export const Shop = () => {
     };
     const handleSortChange = (option) => {
         setSortOption(option);
-      };
+    };
 
     let filteredProducts = products.filter((product) => {
         const matchesManufacturer = !selectedManufacturer.length || selectedManufacturer.includes(product.manufacturer);
@@ -85,23 +92,23 @@ export const Shop = () => {
 
         const matchesSize = !selectedSizes.length || selectedSizes.includes(product.size);
 
-        const matchesSearch = !searchQuery || product.name.toLowerCase().includes(searchQuery.toLowerCase());
+        const matchesSearch = !searchQuery || product.name.toLowerCase().includes(debouncedSearchQuery.toLowerCase());
 
         return matchesManufacturer && matchesCategory && matchesColor && matchesSize && matchesSearch;
     });
 
     filteredProducts = filteredProducts.sort((a, b) => {
-        if (sortOption === "price-asc") {
-          return a.price - b.price;
+        if (sortOption === 'price-asc') {
+            return a.price - b.price;
         }
-        if (sortOption === "price-desc") {
-          return b.price - a.price;
+        if (sortOption === 'price-desc') {
+            return b.price - a.price;
         }
-        if (sortOption === "title") {
-          return a.name.localeCompare(b.name);
+        if (sortOption === 'title') {
+            return a.name.localeCompare(b.name);
         }
         return 0;
-      });
+    });
 
     if (loading) return <p>Loading...</p>;
     else {
@@ -119,7 +126,7 @@ export const Shop = () => {
                                     <div className={`image-${params.shop}`}></div>
                                 </div>
                             </div>
-                            <Sort searchQuery={searchQuery} onSearchChange={setSearchQuery} sortOption={sortOption} onSortChange={handleSortChange}/>
+                            <Sort searchQuery={searchQuery} onSearchChange={setSearchQuery} sortOption={sortOption} onSortChange={handleSortChange} />
                             <div className="row">
                                 <Filter
                                     productType={params.shop}
