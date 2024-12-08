@@ -1,25 +1,27 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
     return <>
-        <section className="section-hero" id="section-hero">
-            <div className="container">
-                <div className="row">
-                    <div className="col-6">
-                        <div className="hero-content">
-                            <h2>Salon keramike</h2>
-                            <h1 className="first-h">Mitar komerc</h1>
-                            <h1 className="second-h">Mozaik</h1>
-                            <h3>Mesto gde svoj dom iz snova pretvarate u realnost</h3>
-                        </div>
+        <section className="section-hero">
+                <div className="wave-container">
+                    <div className="row">
+                        <Link to="/" className="logo">
+                            <img src="/assets/logo_blanco.png" alt="Mozaik" />
+                        </Link>
                     </div>
-                    <div className="col-6">
-                        <div className="hero-banner">
-                            <img src="/assets/logo1x1.png" alt="" />
+                    <div className="row">
+                        <div className="col-6">
+                            <h2>Salon keramike</h2>
+                            <h1>Mozaik</h1>
+                            <h3>Mesto gde svoj dom iz snova pretvarate u realnost</h3>
+                            <a href="#section-products" className="button-57"><span className="text">Nasim proizvodima</span><span>Pogledaj ovde</span></a>
+                        </div>
+                        <div className="col-6">
+                            <img src="/assets/worker-draw.png" alt="Mozaik" />
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
     </>
 }

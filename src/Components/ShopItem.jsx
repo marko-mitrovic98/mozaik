@@ -1,34 +1,30 @@
 import React from 'react';
 
-export const ShopItem = ({productType, products}) => {  
-    
+export const ShopItem = ({ productType, products }) => {
     return (
         <>
             {products.length > 0 ? (
                 <>
-                {products.map((item, index) => (
-                 <a href={`/${productType}/${item.id}`}>
-                    <div className="item" key={index}>
-                    <div className="item-image">
-                        <img src={item.cardPicture} />
-                    </div>
-                    <div className="item-title">
-                        <h2>
-                            {item.name} - {item.size}
-                        </h2>
-                    </div>
-                    <div className="item-description">
-                        <p>{item.manufacturer} - {item.category}</p>
-                    </div>
-                    <div className="item-price">
-                        <h2>{item.price}.00</h2>
-                    </div>
-                </div>
-                 </a>
-            ))}
+                    {products.map((item, index) => (
+                        <a href={`/${productType}/${item.id}`} class="card-link">
+                            <div class="product-card" key={index}>
+                                <div className="itemImage">
+                                    <img src={`/assets/${productType}/${item.cardPicture}`} />
+                                </div>
+                                <h1>
+                                    {item.name} - {item.size}
+                                </h1>
+                                <h2>
+                                    {item.manufacturer} - {item.category}
+                                </h2>
+                                <p>{item.price}.00</p>
+                            </div>
+                        </a>
+                    ))}
                 </>
-            ) : (<div></div>)}
-            
+            ) : (
+                <div></div>
+            )}
         </>
     );
 };

@@ -4,151 +4,91 @@
 @use 'grid' as *;
 .section-products {
     background-color: $primary-color;
+
+    .wave-container {
+        height: auto;
+        background-color: #007555;
+        position: relative;
+
+        @media (max-width: 850px) {
+            .wave-container::before {
+                height: 37.5px;
+            }
+        }
+
+        &:before {
+            content: '';
+            width: 100%;
+            height: 75px;
+            position: absolute;
+            bottom: -0.3%;
+            left: 0;
+            background-size: auto;
+            background-repeat: repeat no-repeat;
+            background-position: 31vw bottom;
+            background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 98L50 92C100 86 200 74 300 50C400 26 500 -10 600 2C700 14 800 74 900 98C1000 122 1100 110 1150 104L1200 98V134H1150C1100 134 1000 134 900 134C800 134 700 134 600 134C500 134 400 134 300 134C200 134 100 134 50 134H0V98Z' fill='%232c3333'/></svg>");
+        }
+    }
+
     .container {
-        width: 100vw;
-        max-width: 100%;
-        height: $section-height;
-        padding: 0;
+        padding: 50px 0;
 
         .row {
-            height: 50%;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-bottom: 50px;
         }
 
-        .col-4 {
-            position: relative;
-            padding: 0;
-        }
-
-        div[class^='card-'] {
-            position: relative;
-            height: 100%;
+        .col-3 {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            transition: 0.3s;
+            border: 5px solid $background-color;
+            border-radius: 30px;
+            background-color: $background-color;
+            padding: 0;
+            margin: 30px 10px;
+            overflow: hidden;
 
-            h1 {
-                text-transform: uppercase;
-                @include font($raleway, 40px, 800);
-                @include stroke($third-color, $primary-color);
-                letter-spacing: 2px;
-                margin: 5px;
-                z-index: 1;
-
-                @media (max-width:$lg) {
-                    font-size: 24px;
-                }
-            }
-
-            span {
-                opacity: 0;
-                color: $third-color;
-                @include font($raleway, 14px, 300);
-                text-align: center;
-                letter-spacing: 1px;
-                margin: 5px;
-                transform: translateY(300%);
-                transition: 0.6s;
-                z-index: 1;                
-
-                @media (max-width:$lg) {
-                    opacity: 1;
-                    transform: translateY(0%);
-                }
-            }
-            
-            .btn {
-                opacity: 0;
-                transform: translateY(300%);
-                margin: 5px 0;
-                transition: transform 0.6s, background-color 0.3s;
-                z-index: 1;
-
-                @media (max-width:$lg) {
-                    opacity: 1;
-                    transform: translateY(0%);
-                    font-size: 12px;
-                }
-            }
-
-            &::before {
-                content: '';
-                position: absolute;
-                height: 100%;
+            [class*='card-'] {
                 width: 100%;
-                background-color: $secondary-color;
-                top: 0;
-                left: 0;
-                opacity: 0.5;
-            }
+                display: flex;
+                flex-direction: column;
+                align-items: center;
 
-            &::after {
-                content: '';
-                position: absolute;
-                height: 100%;
-                width: 100%;
-                background-color: $primary-color;
-                top: 0;
-                left: 0;
-                opacity: 0;
-                transition: 0.6s;
-
-                @media (max-width:$lg) {
-                    opacity: 0;
+                h1 {
+                    @include font($raleway, 30px, 500);
+                    color: $primary-color;
+                    margin: 10px 0;
                 }
-            }
 
-            &:hover {
-                .btn,
                 span {
-                    transform: translateY(0);
-                    opacity: 1;
+                    @include font($raleway, 18px, 400);
+                    color: $secondary-color;
+                    text-align: center;
                 }
 
-                &::after {
-                    opacity: 0.9;
+                .button-57 {
+                    margin: 20px 0;
+                    width: 150px;
+                    text-align: center;
 
-                    @media (max-width:$lg) {
-                        opacity: 0;
+                    span {
+                        color: $heading-color;
+                    }
+
+                    &:hover {
+                        border: 2px solid $primary-color;
+
+                        span {
+                            color: $primary-color;
+                        }
                     }
                 }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
             }
-
-            @media (max-width:$md) {
-                height: 33vh;
-            }
-        }
-
-        .card-ceramic-tiles {
-            background-image: url(/assets/section_keramika.png);
-        }
-
-        .card-profiles {
-            background-image: url(/assets/section_profili.jpg);
-        }
-
-        .card-garrison {
-            background-image: url(/assets/section_garnisne.jpg);
-        }
-
-        .card-materials {
-            background-image: url(/assets/section_materijali.jpg);
-        }
-
-        .card-doors {
-            background-image: url(/assets/section_doors.jpg);
-        }
-
-        .card-laminate {
-            background-image: url(/assets/section_laminat.jpg);
-        }
-
-        @media (max-width:$md) {
-            height: auto;
         }
     }
 }

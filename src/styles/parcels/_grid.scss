@@ -29,7 +29,7 @@ $column-base-width: calc(100% / $columns);
     }
 }
 
-@media (max-width: $md) {
+@media (max-width: $lg) {
     [class*='col-'] {
         width: 100%;
     }

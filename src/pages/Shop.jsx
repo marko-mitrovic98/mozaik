@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Header } from '../Components/header.jsx';
+import { Navbar } from '../Components/Navbar.jsx';
 import { ShopItem } from '../Components/ShopItem.jsx';
-import { Sort } from '../Components/Sort.jsx';
+import { SearchSort } from '../Components/SearchSort.jsx';
 import { Filter } from '../Components/Filter.jsx';
 import { Footer } from '../Components/Footer.jsx';
 import { useParams } from 'react-router-dom';
@@ -43,27 +43,6 @@ export const Shop = () => {
 
         return () => clearTimeout(handler);
     }, [searchQuery]);
-
-    switch (params.shop) {
-        case 'ceramic-tiles':
-            title = 'Keramicke Plocice';
-            break;
-        case 'profiles':
-            title = 'Profili';
-            break;
-        case 'garrison':
-            title = 'Garnisne';
-            break;
-        case 'materials':
-            title = 'Materijali';
-            break;
-        case 'doors':
-            title = 'Vrata';
-            break;
-        case 'laminate':
-            title = 'Laminat';
-            break;
-    }
 
     const handleManufacturerChange = (manufacturer) => {
         setSelectedManufacturers((prev) =>
@@ -114,43 +93,28 @@ export const Shop = () => {
     else {
         return (
             <>
-                <Header />
-                <main>
-                    <section className="section-shop">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-4">
-                                    <h1>{title}</h1>
-                                </div>
-                                <div className="col-8">
-                                    <div className={`image-${params.shop}`}></div>
-                                </div>
-                            </div>
-                            <Sort searchQuery={searchQuery} onSearchChange={setSearchQuery} sortOption={sortOption} onSortChange={handleSortChange} />
-                            <div className="row">
-                                <Filter
-                                    productType={params.shop}
-                                    selectedManufacturer={selectedManufacturer}
-                                    selectedCategories={selectedCategories}
-                                    selectedColors={selectedColors}
-                                    selectedSizes={selectedSizes}
-                                    onManufacturerChange={handleManufacturerChange}
-                                    onCategoryChange={handleCategoryChange}
-                                    onColorChange={handleColorsChange}
-                                    onSizeChange={handleSizeChange}
-                                />
-                                <div className="product-list">
-                                    <div className="filter-rwd">
-                                        <h1>Filteri</h1>
-                                    </div>
-                                    <div className="row">
-                                        <ShopItem productType={params.shop} products={filteredProducts} />
-                                    </div>
-                                </div>
+                <Navbar />
+                <section class="section-shop">
+                    <div class="row page-row">
+                        <Filter
+                            productType={params.shop}
+                            selectedManufacturer={selectedManufacturer}
+                            selectedCategories={selectedCategories}
+                            selectedColors={selectedColors}
+                            selectedSizes={selectedSizes}
+                            onManufacturerChange={handleManufacturerChange}
+                            onCategoryChange={handleCategoryChange}
+                            onColorChange={handleColorsChange}
+                            onSizeChange={handleSizeChange}
+                        />
+                        <div class="col-9 main">
+                            <SearchSort searchQuery={searchQuery} onSearchChange={setSearchQuery} sortOption={sortOption} onSortChange={handleSortChange} />
+                            <div class="product-list">
+                                <ShopItem productType={params.shop} products={filteredProducts} />
                             </div>
                         </div>
-                    </section>
-                </main>
+                    </div>
+                </section>                
                 <Footer />
             </>
         );

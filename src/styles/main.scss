@@ -2,17 +2,25 @@
 @use 'parcels/mixins' as *;
 @use 'parcels/commons' as *;
 @use 'parcels/grid'  as *;
-@use 'parcels/header'  as *;
+@use 'parcels/navbar' as *;
 @use 'parcels/footer' as *;
 @use 'parcels/hero' as *;
-@use 'parcels/products' as *;
 @use 'parcels/services' as *;
-@use 'parcels/blog' as *;
+@use 'parcels/products' as *;
 @use 'parcels/about' as *;
 @use 'parcels/contact' as *;
+@use 'parcels/blog' as *;
 @use 'parcels/shop' as *;
-@use 'parcels/shopItem' as *;
+@use 'parcels/item' as *;
+@use 'parcels/aboutPage' as *;
+@use 'parcels/contactPage' as *;
 
 html {
     scroll-behavior: smooth;
 }
+
+body {
+    background-color: $background-color;
+}
+
+

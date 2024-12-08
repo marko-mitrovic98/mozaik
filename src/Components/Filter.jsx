@@ -14,6 +14,9 @@ export const Filter = ({
     const path = `/files/${productType}.json`;
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [isFilterMenuOpen, setIsFilterMenuOpen] = useState(false);
+
+    const toggleFilterMenu = () => setIsFilterMenuOpen(!isFilterMenuOpen);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -32,6 +35,28 @@ export const Filter = ({
         fetchData();
     }, []);
 
+    let title;
+    switch (productType) {
+        case 'ceramic-tiles':
+            title = 'Keramicke Plocice';
+            break;
+        case 'profiles':
+            title = 'Profili';
+            break;
+        case 'garrison':
+            title = 'Garnisne';
+            break;
+        case 'materials':
+            title = 'Materijali';
+            break;
+        case 'doors':
+            title = 'Vrata';
+            break;
+        case 'laminate':
+            title = 'Laminat';
+            break;
+    }
+
     const uniqueManufacturer = [...new Set(products.map((product) => product.manufacturer))];
     const uniqueCategories = [...new Set(products.map((product) => product.category))];
     const uniqueSizes = [...new Set(products.map((product) => product.size))];
@@ -41,8 +66,9 @@ export const Filter = ({
     else {
         return (
             <>
-                <div className="filter">
-                    <h1>Filteri</h1>
+            <div className={`col-3 sidebar ${isFilterMenuOpen ? 'openFilterMenu' : ''}`}>
+                    <h1 className="title">{title}</h1>
+                    <h1 className={`filter-title `} onClick={toggleFilterMenu}>Filteri</h1>
                     <h2>Proizvođač</h2>
                     <ul>
                         {uniqueManufacturer.map((p) => {
@@ -83,7 +109,7 @@ export const Filter = ({
                             );
                         })}
                     </ul>
-                    <h2>Velicina</h2>
+                    <h2>Veličina</h2>
                     <ul>
                         {uniqueSizes.map((p) => {
                             return (
@@ -122,8 +148,8 @@ export const Filter = ({
                                 </>
                             );
                         })}
-                    </ul>
-                </div>
+                    </ul>    
+                </div>                
             </>
         );
     }

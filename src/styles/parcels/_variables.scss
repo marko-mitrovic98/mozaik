@@ -1,11 +1,28 @@
 $raleway: 'Raleway', sans-serif;
 $open-sans: 'Open Sans', sans-serif;
-$primary-color: #2e8b57;
-$secondary-color: #222;
-$third-color: #f5f5f5;
+
+//COLORS
+$primary-color: #007555;
+$nav-color:#003627;
+$secondary-color: #1f5b3e;
+$heading-color: #f5f5f5;
+$heading2-color: #003627;
+$subhead-color: #686868;
+$background-color: #f7f4fe;
+$dark-color: #2C3333;
+$p-color: #646464;
+
+//BREAKPOINTS
 $sm: 576px;
 $md: 768px;
 $lg: 992px;
 $xl: 1200px;
 $hd: 1600px;
 $section-height:100vh;
+
+
+
+// COLORS IN RESERVE
+$first-color:#2e8b57;
+$lighter-green: #349264;
+$light2-color: #e3ece7;

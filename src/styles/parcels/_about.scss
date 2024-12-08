@@ -2,64 +2,47 @@
 @use 'mixins' as *;
 @use 'commons' as *;
 @use 'grid' as *;
+
 .section-about {
-    background-color: $primary-color;
     .container {
-        height: $section-height;
         max-width: 100%;
         padding: 0;
-        .row {
-            height: 100%;
+    }
+
+    .col-7 {
+        height: 70vh;
+        background-image: url(/assets/section_ceramic-tiles.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 10px solid $background-color;
+    }
+
+    .col-5{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1 {
+            @include font($raleway,40px,500);
+            margin-bottom: 20px;
+            color: $primary-color;
         }
 
-        .col-7 {
-            padding: 0;
-        }
-        .col-5 {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            @media (max-width:$lg) {
-                justify-content: flex-start;
-            }
+        p {
+            @include font($open-sans,18px,400);
+            line-height: 20px;
+            color: $secondary-color;
+            margin-bottom: 20px;
         }
 
-        .image {
-            background-image: url(/assets/section_keramika.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 100%;
-            height: 100%;
-        }
+        .button-57 {
+            width: 200px;
+            align-self: flex-end;
+            letter-spacing: 1px;
 
-        .content {
-            font-family: $raleway;
-            padding: 20px;
-
-            h2 {
-                @include font($raleway,50px,500);
-                margin: 20px 0;
-                font-size: 50px;
-                text-transform: uppercase;
-                color: $third-color;
-                //border-bottom: 4px solid $secondary-color;
-
-                @media (max-width:$lg) {
-                    font-size: 30px;
-                }
-            }
-
-            p {
-                @include font($open-sans,18px,300);
-                color: $third-color;
-                font-size: 18px;
-                opacity: 0.9;
-
-                @media (max-width:$lg) {
-                    font-size: 14px;
-                }
+            &:hover {
+                border: 2px solid $primary-color;
             }
         }
     }

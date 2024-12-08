@@ -2,57 +2,103 @@
 @use 'mixins' as *;
 @use 'commons' as *;
 @use 'grid' as *;
+
 .section-hero {
-    background-color: $secondary-color;
-    .container {
-        height: $section-height;
-        max-width: 100%;
+    .wave-container {
+        height: 90vh;
+        background-color: $primary-color;
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 84px;
+            position: absolute;
+            bottom: -0.3%;
+            left: 0;
+            background-size: auto;
+            background-repeat: repeat no-repeat;
+            background-position: 32vw bottom;
+            background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 98L50 92C100 86 200 74 300 50C400 26 500 -10 600 2C700 14 800 74 900 98C1000 122 1100 110 1150 104L1200 98V134H1150C1100 134 1000 134 900 134C800 134 700 134 600 134C500 134 400 134 300 134C200 134 100 134 50 134H0V98Z' fill='%23f7f4fe'/></svg>");
+        }
+
+        @media (max-width: $lg) {
+            &::before {
+                height: 42px;
+            }
+        }
+
+        .row {
+            max-width: 1352px;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+
+            img {
+                width: auto;
+                height: 100px;
+
+                @media (max-width: $md) {
+                    width: auto;
+                    height: 50px;
+                }
+            }
+        }
 
         .col-6 {
             display: flex;
-
-            @media (max-width: $lg) {
-                height: 100%;
-                padding-top: 62px;
-            }
-        }
-
-        .hero-content {
-            color: white;
-            display: flex;
             flex-direction: column;
             justify-content: center;
+            height: 70vh;
 
-            h1 {
-                @include font($raleway, 60px, bold);
-                text-transform: uppercase;                
+            @media (max-width: $md) {
+                height: 50%;
             }
-            
-            .first-h {
-                    @include stroke($secondary-color, $third-color)
-                }
-            .second-h {
-                color: $primary-color
-            }    
-
             h2 {
-                @include font($raleway, 35px,bold);
+                @include font($raleway, 30px, 500);
                 text-transform: uppercase;
-                color: $primary-color;
+                color: $heading-color;
 
+                @media (max-width: $md) {
+                    font-size: 18px;
+                    margin-top: 50px;
+                }
             }
+            h1 {
+                @include font($raleway, 100px, 600);
+                text-transform: uppercase;
+                color: $heading-color;
 
+                @media (max-width: $md) {
+                    font-size: 50px;
+                }
+            }
             h3 {
-                @include font($raleway, 25px, 300)
+                @include font($raleway, 20px, 300);
+                color: $heading-color;
             }
-        }
 
-        .hero-banner {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
+            .button-57 {
+                margin-top: 30px;
+                width: 300px;
+            }
+
             img {
-                max-width: 100%;
+                max-height: 650px;
+                max-width: 650px;
+                aspect-ratio: 1/1;
+
+                @media (max-width: $md) {
+                    width: 300px;
+                    height: 300px;
+                }
             }
         }
     }

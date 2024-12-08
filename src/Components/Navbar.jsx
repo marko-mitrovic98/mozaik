@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export const Header = () => {
+export const Navbar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -12,22 +12,24 @@ export const Header = () => {
         <nav className="navbar">
             <div className="navbar-container">
                 <Link to="/" className="navbar-logo">
-                    <img src="/assets/logo1x1.png" alt="" />
+                    <img src="/assets/logo_blanco.png" alt="" />
                 </Link>
                 <div className={`hamburger ${isMobileMenuOpen ? 'open' : ''}`} onClick={toggleMobileMenu}>
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-
                 <ul className={`nav-links ${isMobileMenuOpen ? 'mobile' : ''}`}>
                     <li>
-                        <Link to="/" className='navLink'>Pocetna</Link>
+                        <Link to="/" className="navLink">
+                            Pocetna
+                        </Link>
                     </li>
                     <li className="dropdown" onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
-                        <Link  className='navLink' onClick={(e) => e.preventDefault()}>
-                            Proizovdi <span className="arrow">&#9660;</span>
-                        </Link>
+                        <a className="navLink">
+                            {' '}
+                            Proizovdi <span className="arrow">&#9660;</span>{' '}
+                        </a>
                         {isDropdownOpen && (
                             <ul className="dropdown-menu">
                                 <li>
@@ -52,10 +54,22 @@ export const Header = () => {
                         )}
                     </li>
                     {/* <li>
-                        <Link to="/blog" className='navLink'>Blog</Link>
+                        <a href="#" className="navLink">
+                            Blog
+                        </a>
                     </li> */}
+                    <li>
+                        <Link to="/about" className="navLink">
+                            O Nama
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/contact" className="navLink">
+                            KONTAKT
+                        </Link>
+                    </li>
                 </ul>
             </div>
-        </nav>
+        </nav>        
     );
 };

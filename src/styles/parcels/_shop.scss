@@ -2,96 +2,68 @@
 @use 'mixins' as *;
 @use 'commons' as *;
 @use 'grid' as *;
+
 .section-shop {
-    .container {
-        padding: 0;
-        min-height: $section-height;
-        .row {
-            margin: 20px;
-        }
+    max-width: 100vw;
+    .page-row {
+        min-height: 100vh;
 
-        .col-4 {
-            background-color: $primary-color;
+        .sidebar {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
+            padding: 30px;
+            height: 100vh;
+            overflow-y: scroll;
 
-            h1 {
-                @include font($raleway, 40px, 400);
-                text-transform: uppercase;
+            @media (max-width: $lg) {
+                position: fixed;
+                overflow-y: hidden;
+                height: 70px;
+                align-items: center;
+                background-color: $primary-color;
             }
-        }
 
-        .col-8 {
-            padding: 0;
-        }
-
-        div[class^='image-'] {
-            height: 20vh;
-            width: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        .image-ceramic-tiles {
-            background-image: url(/assets/baner_keramika.png);
-        }
-
-        .image-profiles {
-            background-image: url(/assets/baner-profil.jpg);
-        }
-
-        .image-garrison {
-            background-image: url(/assets/baner_garnisne.jpg);
-        }
-
-        .image-materials {
-            background-image: url(/assets/baner_materijali.jpg);
-        }
-
-        .image-doors {
-            background-image: url(/assets/baner_vrata.jpg);
-        }
-
-        .image-laminate {
-            background-image: url(/assets/baner_laminat.jpg);
-        }
-
-        .filter-rwd {
-            display: none;
-            cursor: pointer;
-
-            h1 {
-                background-color: $secondary-color;
+            .title {
+                width: 100%;
+                @include font($raleway, 30px, 700);
                 color: $primary-color;
-                @include font($raleway, 25px, 400);
-                text-transform: uppercase;
-                padding: 10px;
+                padding: 10px 0;
+                border-bottom: 1px solid $primary-color;
+
+                @media (max-width: $lg) {
+                    display: none;
+                }
             }
 
-            @media (max-width: $md) {
-                display: flex;
-                justify-content: center;
-            }
-        }
+            .filter-title {
+                width: 100%;
+                @include font($raleway, 24px, 600);
+                color: $heading2-color;
+                padding: 10px 0;
+                border-bottom: 1px solid $primary-color;
 
-        .filter {
-            width: 20%;
-
-            h1 {
-                background-color: $secondary-color;
-                color: $primary-color;
-                @include font($raleway, 25px, 400);
-                text-transform: uppercase;
-                padding: 10px;
+                @media (max-width: $lg) {
+                    cursor: pointer;
+                    text-align: center;
+                    color: $heading-color;
+                    padding: 0;
+                }
             }
 
             h2 {
-                background-color: gainsboro;
-                color: $secondary-color;
-                @include font($raleway, 18px, 400);
-                padding: 10px 5px;
+                @include font($raleway, 20px, 500);
+                color: $heading2-color;
+                padding: 20px 0 5px;
+
+                @media (max-width: $lg) {
+                    display: none;
+                }
+            }
+
+            ul {
+                @media (max-width: $lg) {
+                    display: none;
+                }
             }
 
             .checkbox-label {
@@ -99,24 +71,39 @@
                 display: block;
                 margin-top: 5px;
 
+                &:hover {
+                    span {
+                        transition: 0.3s;
+                        color: $dark-color;
+                    }
+
+                    input {
+                        transition: 0.3s;
+                        background-color: #d1d1d1;
+                    }
+                }
+
                 input {
+                    position: relative;
+                    display: inline-block;
                     appearance: none;
                     cursor: pointer;
-                    display: inline-block;
-                    position: relative;
                     height: 24px;
-                    aspect-ratio: 1 / 1;
-                    background-color: #eee;
+                    aspect-ratio: 1/1;
+                    background-color: $heading-color;
+                    border: 1px solid $secondary-color;
+                    border-radius: 5px;
                     transform: translateY(5px);
 
-                    &:checked::after {
+                    &:checked:after {
                         content: '';
-                        height: 24px;
-                        aspect-ratio: 1 / 1;
+                        position: absolute;
+                        height: 22px;
+                        aspect-ratio: 1/1;
+                        border-radius: 5px;
                         background-color: $primary-color;
                         background-position: center;
                         background-repeat: no-repeat;
-                        position: absolute;
                     }
                 }
 
@@ -125,123 +112,186 @@
                     color: $secondary-color;
                     margin-left: 5px;
                     text-transform: capitalize;
-                }
 
-                &:hover {
-                    span {
-                        transition: 0.3s;
-                        color: $primary-color;
-                    }
-
-                    input {
-                        transition: 0.3s;
-                        background-color: #d1d1d1;
+                    @media (max-width: $lg) {
+                        color: $heading-color;
                     }
                 }
             }
-
-            li:last-child {
-                margin-bottom: 10px;
-            }
-
-            @media (max-width: $md) {
-                display: none;
-            }
         }
 
-        .row-sort {
-            display: flex;
-            justify-content:space-between;
-        }
-
-        .searchBar {
-            display: flex;
-
-            input {
-                width: 350px;
-                max-width: 400px;
-                border: 1px solid $primary-color;
-                border-radius: 10px;
-                padding: 5px;
-                margin-bottom: 5px;
-            }
-        }
-
-        .sort {           
-            label {
-                @include font($open-sans, 18px, 300);
+        .openFilterMenu {
+            @media (max-width: $lg) {
+                position: fixed;
+                overflow-y: scroll;
+                height: 100vh;
+                align-items: flex-start;
+                background-color: $primary-color;
             }
 
-            select {
-                border: 1px solid $primary-color;
-                border-radius: 10px;
-                padding: 5px;
-            }
-        }
+            .filter-title {
+                @media (max-width: $lg) {
+                    text-align: center;
+                    display: inline-block;
+                    color: $dark-color;
 
-        .product-list {
-            width: 80%;
-
-            .row {
-                margin-top: 0;
-            }            
-
-            a {
-                text-decoration: none;
-                
-                .item {
-                    margin: 0 15px 40px 15px;
-                    width: 300px;
-                    height: 500px;
-                    box-shadow: 0px 5px 10px 2px #c5c5c5;
-                    cursor: pointer;
-                    transition: 0.3s;
-                    
-    
-                    &:hover {
-                        box-shadow: 0px 5px 10px 2px $primary-color;
-                        .item-image {
-                            transition: 0.3s;
-                            background-color: $primary-color;
-                        }
-                    }
-    
-                    .item-image {
-                        width: 300px;
-                        height: 300px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        img {
-                            max-width: 300px;
-                            max-height: 300px;
-                        }
-                    }
-    
-                    .item-title {
+                    &::after {
+                        content: ' - X';
+                        @include font($raleway, 24px, 600);
+                        color: $heading-color;
                         padding: 10px 0;
-                        border-top: 2px solid $primary-color;
-    
-                        h2 {
-                            @include font($raleway, 25px, 500);
-                            color: $primary-color;
+                    }
+                }
+            }
+
+            h2 {
+                @media (max-width: $lg) {
+                    display: inline-block;
+                }
+            }
+
+            ul {
+                @media (max-width: $lg) {
+                    display: inline-block;
+                }
+            }
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 30px;
+
+            .search-sort {
+                width: 100%;
+                align-self: flex-start;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+
+                @media (max-width: $lg) {
+                    margin-top: 70px;
+                    flex-direction: column;
+                }
+
+                .search {
+                    @include font($open-sans, 16px, 400);
+                    padding: 10px 5px;
+                    width: 500px;
+                    background-color: $background-color;
+                    border: none;
+                    border-bottom: 1px solid $dark-color;
+
+                    &:focus {
+                        color: $primary-color;
+                        border-bottom: 2px solid $primary-color;
+                    }
+
+                    @media (max-width: $lg) {
+                        width: 300px;
+                        margin-bottom: 20px;
+                        text-align: center;
+                    }
+                }
+
+                .sort {
+                    @include font($open-sans, 16px, 400);
+
+                    select {
+                        @include font($open-sans, 16px, 400);
+                        padding: 5px 10px;
+                        border: 1px solid $dark-color;
+                        border-radius: 5px;
+                        color: $nav-color;
+                    }
+                }
+            }
+
+            .product-list {
+                height: 100vh;
+                overflow-y: scroll;
+                align-self: flex-start;
+                display: flex;
+                flex-wrap: wrap;
+                padding-bottom: 100px;                
+
+                .card-link {
+                    margin: 20px;
+                    width: 290px;
+                    height: 450px;
+                    text-decoration: none;
+
+                    @media (max-width: $xl) {
+                        width: 250px;
+                    }
+
+                    @media (max-width: $md) {
+                        width: 100%;
+                    }
+
+                    .product-card {
+                        display: flex;
+                        flex-direction: column;
+
+                        @media (max-width: $lg) {
+                            align-items: center;
+                        }
+
+                        .itemImage {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: $light2-color;
+                            align-self: center;
+                            width: 290px;
+                            height: 290px;
+
+                            img {
+                                max-width: 290px;
+                                max-height: 290px;
+                            }
+
+                            @media (max-width: $lg) {
+                                height: 300px;
+                                width: auto;
+                            }
+                        }
+
+                        h1 {
+                            @include font($raleway, 24px, 500);
+                            color: $secondary-color;
                             text-transform: uppercase;
-                            margin-left: 5px;
+                            margin: 5px;
+
+                            @media (max-width: $lg) {
+                                text-align: center;
+                            }
+                        }
+
+                        h2 {
+                            @include font($open-sans, 16px, 500);
+                            color: $subhead-color;
+                            text-transform: capitalize;
+                            margin: 5px;
+                        }
+
+                        p {
+                            @include font($raleway, 30px, 500);
+                            color: $secondary-color;
+                            margin: 10px;
                         }
                     }
-    
-                    .item-description {
-                        margin-left: 5px;
-                        @include font($open-sans, 18px, 400);
-                        color: $secondary-color;
-                        text-transform: uppercase;
-                    }
-    
-                    .item-price {
-                        margin-top: 10px;
-                        margin-left: 5px;
-                        @include font($open-sans, 35px, 700);
-                        color: $primary-color;
+
+                    &:hover {
+                        transition: 0.3s;
+                        background-color: $primary-color;
+
+                        h1,
+                        h2,
+                        p {
+                            color: $heading-color;
+                        }
                     }
                 }
             }

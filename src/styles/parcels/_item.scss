@@ -1,0 +1,118 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'commons' as *;
+@use 'grid' as *;
+
+.section-item {
+    .col-7 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        background-color: $light2-color;
+        padding: 0;
+
+        img {
+            height: 800px;
+            width: auto;
+
+            @media (max-width:$lg) {
+                height: 400px;
+            }
+        }    
+        
+        div[class*='arrow-'] {
+            top: 45%;
+            user-select: none;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            padding: 30px 20px;
+            color: $primary-color;
+            background-color: $background-color;
+
+            &:hover{
+                background-color: $primary-color;
+                color: $background-color;
+                cursor: pointer;
+                transition: 0.2s;
+            }
+        }
+
+        .arrow-left {
+            left: 0;                    
+        }
+
+        .arrow-right {
+            right: 0;                   
+        }
+    }
+
+    .col-5 {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            @include font($raleway, 60px, 500);
+            text-transform: uppercase;
+            color: $secondary-color;
+            margin: 50px 10px 20px;
+
+            @media (max-width:$lg) {
+                font-size: 40px;
+            }
+        }
+
+        h2 {
+            @include font($raleway, 30px, 400);
+            text-transform: capitalize;
+            color: $subhead-color;
+            margin: 0px 10px 20px;
+
+            @media (max-width:$lg) {
+                font-size: 20px;
+            }
+        }
+
+        h3 {
+            @include font($raleway, 24px, 600);
+            text-transform: uppercase;
+            color: $secondary-color;
+            margin: 0px 10px 20px;
+
+            @media (max-width:$lg) {
+                font-size: 18px;
+            }
+        }
+
+        h4 {
+            @include font($raleway, 80px, 400);
+            text-transform: uppercase;
+            color: $primary-color;
+            margin: 0px 10px 50px;
+
+            @media (max-width:$lg) {
+                font-size: 60px;
+            }
+        }
+
+        p {
+            @include font($open-sans, 16px, 400);
+            line-height: 20px;
+            color: $p-color;
+            margin: 0px 10px 20px;
+        }
+
+        li {
+            @include font($open-sans, 16px, 400);
+            color: $p-color;
+            margin: 0px 10px 10px;
+
+            &::before {
+                content: '>';
+                @include font($open-sans, 16px, 700);
+                color: $heading2-color;
+                margin-right: 5px;
+            }
+        }
+    }
+}
