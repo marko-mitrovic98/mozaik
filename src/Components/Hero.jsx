@@ -15,7 +15,7 @@ export const Hero = () => {
                             <h2>Salon keramike</h2>
                             <h1>Mozaik</h1>
                             <h3>Mesto gde svoj dom iz snova pretvarate u realnost</h3>
-                            <a href="#section-products" className="button-57"><span className="text">Nasim proizvodima</span><span>Pogledaj ovde</span></a>
+                            <a href="#section-products" className="button-57"><span className="text">Našim proizvodima</span><span>Pogledaj ovde</span></a>
                         </div>
                         <div className="col-6">
                             <img src="/assets/worker-draw.png" alt="Mozaik" />

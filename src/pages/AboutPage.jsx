@@ -36,7 +36,7 @@ export const AboutPage = () => {
                             Naš cilj je da klijentima ponudimo proizvode koji, osim što su visokog kvaliteta, su i modernog dizajna, a i da brzo stignemo do
                             njih!
                         </p>
-                        <img src="/assets/lokal.jpg" alt="Mozaik lokal" />
+                        <img src="/assets/logo1x1.png" alt="Mozaik lokal" />
                         <h2>Pravilnik</h2>
                         <div className="accordion">
                             {items.map((item, index) => (

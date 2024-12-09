@@ -12,7 +12,7 @@ export const Navbar = () => {
         <nav className="navbar">
             <div className="navbar-container">
                 <Link to="/" className="navbar-logo">
-                    <img src="/assets/logo_blanco.png" alt="" />
+                    <img src="/assets/logo.png" alt="" />
                 </Link>
                 <div className={`hamburger ${isMobileMenuOpen ? 'open' : ''}`} onClick={toggleMobileMenu}>
                     <span></span>

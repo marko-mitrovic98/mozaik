@@ -74,6 +74,32 @@
     }
 }
 
+.section-contactPartners {
+    .row {
+        justify-content: center;
+        gap: 50px;
+
+        img {
+            width: 200px;
+            aspect-ratio: 1/1;
+        }
+
+        h1 {
+            @include font($raleway,50px,500);
+            color: $primary-color;
+            margin-top: 50px;
+        }
+
+        h2 {
+            @include font($raleway,50px,300);
+            color: darkblue;
+            width: 200px;
+            text-align: center;
+            align-self: center;
+        }
+    }
+}
+
 .section-contactForm {
     margin: 100px 0;
 

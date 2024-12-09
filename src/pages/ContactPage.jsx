@@ -42,10 +42,10 @@ export const ContactPage = () => {
                                     <span>PIB:</span> 105071643
                                 </li>
                                 <li>
-                                    <span>Maticni broj:</span> 123456789
+                                    <span>Matični broj:</span> 20308150
                                 </li>
                                 <li>
-                                    <span>Broj tekuceg racuna:</span> 100-123456-78
+                                    <span>Broj tekućeg računa:</span> 160-278355-84
                                 </li>
                             </ul>
                         </div>
@@ -61,21 +61,52 @@ export const ContactPage = () => {
                     referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
             </section>
-            <section className='section-contactForm'>
+            <section className="section-contactPartners">
+                <div className="row">
+                    <h1>Naši partneri</h1>
+                    </div>
+                    <div className="row">
+                        <img src="/assets/partners/zorka.png" alt="zorka keramika" />
+                        <img src="/assets/partners/kanjiza.png" alt="kanjiza keramika" />
+                        <img src="/assets/partners/ornament.png" alt="ornament keramika" />
+                    </div>
+                    <div className="row">
+                        <img src="/assets/partners/balkania.png" alt="balkania keramika" />
+                        <img src="/assets/partners/minotti.png" alt="minotti" />
+                        <img src="/assets/partners/nordiker.png" alt="nordiker" />
+                        <h2>fontana</h2>
+                    </div>
+                    <div className="row">
+                        <img src="/assets/partners/europrofil.png" alt="europrofil" />
+                        <img src="/assets/partners/maric.png" alt="vrata maric" />
+                        <img src="/assets/partners/pinoles.png" alt="pinoles laminat" />
+                    </div>
+                    <div className="row">
+                        <img src="/assets/partners/maxima.png" alt="maxima" />
+                        <img src="/assets/partners/mapei.png" alt="mapei" />
+                        <img src="/assets/partners/rofix.png" alt="rofix" />
+                        <img src="/assets/partners/beorol.png" alt="beorol" />
+                        <img src="/assets/partners/abs.png" alt="abs" />
+                    </div>
+            </section>
+            <section className="section-contactForm">
                 <div className="container">
                     <div className="row">
-                        <h2>Posalji nam poruku</h2>
+                        <h2>Pošalji nam poruku</h2>
                         <h3>Upit trenutno nije u funkciji</h3>
-                        <form action="submit">                                                    
-                                <input type="text" id='name' name='name' placeholder='Ime i Prezime' required/>                            
-                                                    
-                                <input type="email" id='email' name='email' placeholder='E-mail' required/>                            
-                                                    
-                                <input type="text" id='subject' name='subject' placeholder='Naslov poruke' required/>
-                            
-                                <textarea id='message' name='message' placeholder='Tekst Poruke' required/>
+                        <form action="submit">
+                            <input type="text" id="name" name="name" placeholder="Ime i Prezime" required />
 
-                                <button type='submit' className='button-57'><span>Posalji</span><span>Posalji</span></button>
+                            <input type="email" id="email" name="email" placeholder="E-mail" required />
+
+                            <input type="text" id="subject" name="subject" placeholder="Naslov poruke" required />
+
+                            <textarea id="message" name="message" placeholder="Tekst Poruke" required />
+
+                            <button type="submit" className="button-57">
+                                <span>Pošalji</span>
+                                <span>Pošalji</span>
+                            </button>
                         </form>
                     </div>
                 </div>

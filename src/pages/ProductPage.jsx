@@ -3,6 +3,8 @@ import { Navbar } from '../Components/Navbar';
 import { Footer } from '../Components/Footer';
 import { useParams } from 'react-router-dom';
 import { Loading } from '../Components/Loading';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 export const ProductPage = () => {
     const { shop, id } = useParams();
@@ -22,7 +24,7 @@ export const ProductPage = () => {
                 setProduct(selectedProduct);
                 setLoading(false);
                 const textFilePath = selectedProduct.description;
-                const textResponse = await fetch(`/files/descriptions/${textFilePath}.txt`);
+                const textResponse = await fetch(`/files/descriptions/${shop}/${textFilePath}.md`);
                 const textContent = await textResponse.text();
 
                 setText(textContent);
@@ -75,7 +77,7 @@ export const ProductPage = () => {
                             </h2>
                             <h4>{product.price}.00</h4>
                             <h3>Opis Proizvoda</h3>
-                            <p>{text}</p>
+                            <p><ReactMarkdown remarkPlugins={[remarkGfm]}>{text}</ReactMarkdown></p>
                             <h3>Boje:</h3>
                             <ul>
                                 {product.colors.map((p) => (

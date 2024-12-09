@@ -11,7 +11,7 @@ export const Contact = () => {
                             <h1>Kontakt</h1>
                             <h2>Poslovna jedinica</h2>
                             <p>
-                                Adresa: Milovana Lazarevica 65m <br />
+                                Adresa: Milovana Lazarevića 65m <br />
                                 Grad: Lazarevac, 11550 <br />
                                 Fiksni: 011/81-27-607
                                 <br />
@@ -24,9 +24,9 @@ export const Contact = () => {
                                 Mitar-komerc doo <br />
                                 PIB: 105071643
                                 <br />
-                                Matični broj: 12345678
+                                Matični broj: 20308150
                                 <br />
-                                Broj tekućeg računa: 100-123456-78
+                                Broj tekućeg računa: 160-278355-84
                             </p>
                             <Link to="/contact" className="button-57">
                                 <span>Jos informacija?</span>
