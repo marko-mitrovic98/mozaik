@@ -12,9 +12,8 @@ export const ProductsCard = ({ title, description, category }) => {
                     <h1>{title}</h1>
                     <span>{description}</span>
                     <Link to={`/${category}`} className="button-57">
-                        {' '}
                         <span>Vidi</span>
-                        <span>Vise</span>{' '}
+                        <span>Vise</span>
                     </Link>
                 </div>
             </div>

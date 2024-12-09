@@ -1,50 +1,14 @@
 [
     {
-        "id": "eagle-ivory-25x75",
-        "name": "Eagle Ivory",
-        "category": "Zidna",
-        "manufacturer": "Kanjiza",
-        "size": "25x75",
-        "description": "Ovo je plocica.",
-        "colors": ["krem"],
-        "price": "1350",
-        "cardPicture": "/assets/keramika/Eagle-Ivory-2575.jpg",
-        "pictures": ["/assets/keramika/Eagle-Ivory-2575.jpg"]
-    },
-    {
-        "id": "eagle-ivory-45x45",
-        "name": "Eagle Ivory",
-        "category": "Podna",
-        "manufacturer": "Kanjiza",
-        "size": "45x45",
-        "description": "Ovo je plocica.",
-        "colors": ["krem"],
-        "price": "1650",
-        "cardPicture": "/assets/keramika/Eagle-Ivory-4545.jpg",
-        "pictures": ["/assets/keramika/Eagle-Ivory-4545.jpg"]
-    },
-    {
-        "id": "ravena-pulido-80x160",
-        "name": "Ravena Pulido",
-        "category": "Podna",
-        "manufacturer": "Balkania",
-        "size": "80x160",
-        "description": "Ovo je plocica.",
-        "colors": ["bela"],
-        "price": "4200",
-        "cardPicture": "/assets/keramika/Ravena-Pulido.jpg",
-        "pictures": ["/assets/keramika/Ravena-Pulido.jpg", "/assets/keramika/Ravena-Pulido-1.jpg", "/assets/keramika/Ravena-Pulido-2.jpg"]
-    },
-    {
-        "id": "concrete-biege-30x60",
-        "name": "Concrete Beige",
-        "category": "Zidna",
-        "manufacturer": "Balkania",
-        "size": "30x60",
-        "description": "Ovo je plocica.",
-        "colors": ["bez"],
-        "price": "2350",
-        "cardPicture": "/assets/keramika/Concrete-Beige.jpg",
-        "pictures": ["/assets/keramika/Concrete-Beige.jpg", "/assets/keramika/Concrete-Beige-1.jpg", "/assets/keramika/Concrete-Biege-2.jpg"]
+        "id": "baza-podataka-u-izradi",
+        "name": "baza podataka u izradi",
+        "category": "",
+        "manufacturer": "",
+        "size": "",
+        "description": "blanco",
+        "colors": [""],
+        "price": "0",
+        "cardPicture": "logo1x1.png",
+        "pictures": ["logo1x1.png"]
     }
 ]

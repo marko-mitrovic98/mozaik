@@ -1,0 +1,1 @@
+Nivelatori pločica (nivelatori za keramiku) se koriste kao pomoć keramičarima da postavljanje pločica dovedu do perfekcije i dobiju idealnu nivelaciju pločica po visini.

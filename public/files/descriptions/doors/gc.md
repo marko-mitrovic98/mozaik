@@ -1,0 +1,3 @@
+Sobna vrata "Gennaro Collezione" je linija vrata Braća Marić, nastala zahvaljujući zajedničkom poduhvatu tima nasih dizajnera i prestižne italijanske dizajnerske kuće. Dajući mašti na volju, a ne gubeći osećaj za funkcionalno, dobili smo sobna vrata futuristickog izgleda savršeno prilagodjena toplim dekorima drveta. Prirodni dekori hrasta i oraha, u kombinacijama sa belom bojom doneće u vaš dom toplinu upakovanu u savremeni dizajn. Ova linija sobnih vrata takođe je zasnovana na najnovijoj generaciji CLPL materijala što joj pored savršenog dizajna daje i odlične kvalitativne karakteristike. Konstrukcija vrata je ista kao i kod Exkluziv modela ili ECO Line modela, s tim što je vratno krilo jos masivnije i punije.
+
+**Cena vrata je sa ugradnjom.**

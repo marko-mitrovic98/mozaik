@@ -1,0 +1,6 @@
+KARAKTERISTIKE FUGALIN je vodoodbojna, paropropusna, elastična, fungicidno zaštićena masa za fugovanje, koja odlično prianja na površinu i otporna je na ogrebotine. Namenjen je za fugovanje keramičkih i staklenih pločica, mozaika i kamena kod unutrašnjih i spoljašnjih radova. Koristi se kako za zidne tako i za podne površine. Maksimalna širina fuge ne sme biti veća od 8 mm. FUGALIN zbog svojih izuzetnih tehničkih svojstava pogodan je za primenu u kupatilima, kuhinjama, kao i u enterijerima koji poseduju sistem podnog grejanja. FUGALIN se proizvodi u različitim nijansama, prema MAXIMA ton karti masa za fugovanje.
+
+**Dodatne informacije**
+- Radna temperatura: Optimalna radna temperatura je od +10 °C do +30 °C. Ne sme se koristiti ispod +5 °C, kao i po jakom suncu, vetru, magli i kiši.
+- Potrošnja: **0,5–1 kg/m²**, u zavisnosti od širine i dubine fuga, kao i formata pločica.
+- Rok upotrebe i skladištenje: 24 meseca od datuma proizvodnje istaknutog na ambalaži. Čuvati u zatvorenoj i neoštećenoj ambalaži, u suvoj i provetrenoj prostoriji.

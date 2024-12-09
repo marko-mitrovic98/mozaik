@@ -1,0 +1,6 @@
+MAXIKRIL Quartz Grip je grubi prajmer za problematične površine, na bazi sintetskih veziva u vodenoj disperziji, oplemenjen kvarcom. Spreman za upotrebu i koristi se za prajmerisanje unutrašnjih i spoljašnjih površina. Ugradnjom MAXIKRIL Quartz Grip-a, postiže se poboljšanje veze kod svih maltera na bazi cementa, gipsa, kreča kao i betonskih podloga, cigle, betonskih i gas-betonskih blokova i sl. Pogodan je za poboljšanje adhezije lepkova za keramiku, masa za izravnavanje podova i zidova, na neupijajućim površinama poput keramičkih pločica, teraca i prirodnog kamena. Površine tretirane MAXIKRIL Quartz Grip prajmerom su ujednačene, ravnomerno upijaju, smanjuje im se upijanje vode. Površine su značajno hrapavije, čime se postiže bolji prihvat narednog materijala.
+
+**Dodatne informacije**
+- Radna temperatura: Optimalna radna temperatura je od +10 °C do +30 °C. Ne sme se koristiti ispod +5 °C, kao i po jakom suncu, vetru, magli i kiši. Sveže nanete površine, u optimalnim uslovima, zaštititi od atmosferskih uticaja najmanje 24 sata.
+- Potrošnja: 200–300 g/m², u zavisnosti od hrapavosti i upijanja podloge, tehnike i načina nanošenja.
+- Rok upotrebe i skladištenje: 18 meseci od datuma proizvodnje istaknutog na ambalaži. Čuvati u originalnoj, dobro zatvorenoj i neoštećenoj ambalaži, pri temperaturi od +5 °C do +25 °C, zaštićeno od direktne sunčeve svetlosti.

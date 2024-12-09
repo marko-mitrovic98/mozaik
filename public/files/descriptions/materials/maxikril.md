@@ -1,0 +1,6 @@
+MAXIKRIL Ceramic je akrilni prajmer namenjen za impregnaciju apsorbujućih i neapsorbujućih problematičnih površina (glazirane pločice, beton, kamen, teraco, gips ploče, gas beton elementi, gipsani, krečni i cementni mašinski malteri), a pre nanošenja lepkova i masa za izravnavanje. MAXIKRIL Ceramic se lako nanosi, brzo suši i kvalitetno impregnira podlogu, ima veoma visoku vodoodbojnost i vezivnost. Premazane površine su ujednačene, ne upijaju i poboljšavaju adheziju lepkova. MAXIKRIL Ceramic ne koristiti kao prajmer za boje i dekorativne maltere.
+
+**Dodatne informacije**
+- Radna temperatura: Optimalna radna temperatura je od +10 °C do +30 °C. Ne sme se koristiti ispod +5 °C, kao i po jakom suncu, vetru, magli i kiši.
+- Potrošnja: 30–150 ml/m², u zavisnosti od razblaženja, hrapavosti i upojnosti podloge.
+- Rok upotrebe i skladištenje: 18 meseci od datuma proizvodnje istaknutog na ambalaži. Čuvati u originalnoj, dobro zatvorenoj i neoštećenoj ambalaži, pri temperaturi od +5 °C do +25 °C, zaštićeno od direktne sunčeve svetlosti.

@@ -1,0 +1,3 @@
+- Za završne radove i popunjavanje prostora kod parketarskih radova.
+- Dobro prijanjanje na sve vrste materijala
+- Može se farbati i lakirati nakon sušenja
