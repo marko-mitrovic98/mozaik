@@ -209,12 +209,17 @@
             }
 
             .product-list {
-                height: 100vh;
+                height: 90vh;
                 overflow-y: scroll;
                 align-self: flex-start;
                 display: flex;
                 flex-wrap: wrap;
-                padding-bottom: 100px;                
+                padding-bottom: 100px; 
+                
+                @media (max-width:$lg) {
+                    height: auto;
+                    overflow: hidden;
+                }
 
                 .card-link {
                     margin: 20px;

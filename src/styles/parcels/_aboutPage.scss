@@ -37,7 +37,7 @@
 
         @media (max-width: $lg) {
             width: 350px;
-            height: 210px;
+            height: 350px;
         }
     }
 
@@ -73,6 +73,7 @@
                 display: none;
 
                 p {
+                    width: 100%;
                     @include font($raleway, 20px, 400);
                     line-height: 22px;
                     letter-spacing: 0.5px;
@@ -84,7 +85,7 @@
                     }
                 }
 
-                &.active {
+                &.active {                    
                     display: block;
                 }
             }

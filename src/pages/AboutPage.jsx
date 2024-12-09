@@ -3,10 +3,14 @@ import { Navbar } from '../Components/Navbar.jsx';
 import { Footer } from '../Components/Footer.jsx';
 
 const items = [
-    { title: "Section 1", content: "Content for section 1." },
-    { title: "Section 2", content: "Content for section 2." },
-    { title: "Section 3", content: "Content for section 3." },
-  ];
+    {
+        title: 'Pravilo 1',
+        content:
+            'Prevoz robe na adresu kupca je do mesta na koje može da priđe teretno vozilo (kombi), a da ne pretrpi oštećenje. Prevoz ne podrazumeva unošenje robe u objekat, vaša obaveza je da obezbedite lice za pomoć pri istovaru i unošenje robe.',
+    },
+    { title: 'Pravilo 2', content: 'Kupac moze da izvrši povrat neiskoriscene robe samo u originalnoj ambalaži. Povrat robe je dozvoljen samo u roku od 30 dana od isporuke. Nije dozvoljen povrat strane/uvozne robe.' },
+    { title: 'Pravilo 3', content: 'Isporučena roba nije u potpunosti identična uzorku na panou ili izloženom uzorku. Raspored nijansi boje/senki/šara/obeležja, kao i sam izgled pločice je različit u istom pakovanju iste pločice, tako je dizajnirano od strane proizvođača. Reklamacije na ove razlike od vidjenog ne primamo.' },
+];
 
 export const AboutPage = () => {
     const [activeIndex, setActiveIndex] = useState(null);
