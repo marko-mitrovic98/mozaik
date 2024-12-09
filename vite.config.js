@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   base: '/', 
   build: {
-    outDir: 'custom-dist', 
+    outDir: 'dist', 
     sourcemap: true,
     minify: 'esbuild',
   },
