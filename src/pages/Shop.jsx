@@ -15,7 +15,6 @@ export const Shop = () => {
     const [debouncedSearchQuery, setDebouncedSearchQuery] = useState('');
     const [sortOption, setSortOption] = useState('default');
     const params = useParams();
-    let title = '';
 
     const path = `/files/${params.shop}.json`;
     const [products, setProducts] = useState([]);

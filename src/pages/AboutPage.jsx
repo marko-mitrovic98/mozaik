@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Navbar } from '../Components/Navbar.jsx';
 import { Footer } from '../Components/Footer.jsx';
 
@@ -8,12 +8,24 @@ const items = [
         content:
             'Prevoz robe na adresu kupca je do mesta na koje može da priđe teretno vozilo (kombi), a da ne pretrpi oštećenje. Prevoz ne podrazumeva unošenje robe u objekat, vaša obaveza je da obezbedite lice za pomoć pri istovaru i unošenje robe.',
     },
-    { title: 'Pravilo 2', content: 'Kupac moze da izvrši povrat neiskoriscene robe samo u originalnoj ambalaži. Povrat robe je dozvoljen samo u roku od 30 dana od isporuke. Nije dozvoljen povrat strane/uvozne robe.' },
-    { title: 'Pravilo 3', content: 'Isporučena roba nije u potpunosti identična uzorku na panou ili izloženom uzorku. Raspored nijansi boje/senki/šara/obeležja, kao i sam izgled pločice je različit u istom pakovanju iste pločice, tako je dizajnirano od strane proizvođača. Reklamacije na ove razlike od vidjenog ne primamo.' },
+    {
+        title: 'Pravilo 2',
+        content:
+            'Kupac moze da izvrši povrat neiskoriscene robe samo u originalnoj ambalaži. Povrat robe je dozvoljen samo u roku od 30 dana od isporuke. Nije dozvoljen povrat strane/uvozne robe.',
+    },
+    {
+        title: 'Pravilo 3',
+        content:
+            'Isporučena roba nije u potpunosti identična uzorku na panou ili izloženom uzorku. Raspored nijansi boje/senki/šara/obeležja, kao i sam izgled pločice je različit u istom pakovanju iste pločice, tako je dizajnirano od strane proizvođača. Reklamacije na ove razlike od vidjenog ne primamo.',
+    },
 ];
 
 export const AboutPage = () => {
     const [activeIndex, setActiveIndex] = useState(null);
+
+    useEffect(() => {
+        document.title = "O Nama";
+    }, []);
 
     const toggleAccordion = (index) => {
         setActiveIndex(activeIndex === index ? null : index);

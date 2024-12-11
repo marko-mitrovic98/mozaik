@@ -56,6 +56,7 @@ export const Filter = ({
             title = 'Laminat';
             break;
     }
+    document.title = title;
 
     const uniqueManufacturer = [...new Set(products.map((product) => product.manufacturer))];
     const uniqueCategories = [...new Set(products.map((product) => product.category))];

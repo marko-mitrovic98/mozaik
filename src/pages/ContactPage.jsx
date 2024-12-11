@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { Navbar } from '../Components/Navbar.jsx';
 import { Footer } from '../Components/Footer.jsx';
 
 export const ContactPage = () => {
+    useEffect(() => {
+        document.title = "Kontakt";
+    }, []);
+
     return (
         <>
             <Navbar />

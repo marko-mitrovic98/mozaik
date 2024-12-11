@@ -7,11 +7,12 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
 export const ProductPage = () => {
-    const { shop, id } = useParams();
+    const { shop, id, name } = useParams();
     const [loading, setLoading] = useState(true);
     const [increment, SetIncrement] = useState(0);
     const path = `/files/${shop}.json`;
     const [product, setProduct] = useState(null);
+    const [title, setTitle] = useState('');
     const [text, setText] = useState('');
 
     useEffect(() => {
@@ -22,6 +23,7 @@ export const ProductPage = () => {
                 const selectedProduct = data.find((p) => p.id === id);
 
                 setProduct(selectedProduct);
+                setTitle(selectedProduct.name);
                 setLoading(false);
                 const textFilePath = selectedProduct.description;
                 const textResponse = await fetch(`/files/descriptions/${shop}/${textFilePath}.md`);
@@ -36,6 +38,8 @@ export const ProductPage = () => {
 
         fetchProductData();
     }, [id, shop]);
+
+    document.title = `${title.toUpperCase()}`;
 
     const handlePlus = () => {
         SetIncrement((prev) => {
@@ -77,7 +81,9 @@ export const ProductPage = () => {
                             </h2>
                             <h4>{product.price}.00</h4>
                             <h3>Opis Proizvoda</h3>
-                            <p><ReactMarkdown remarkPlugins={[remarkGfm]}>{text}</ReactMarkdown></p>
+                            <p>
+                                <ReactMarkdown remarkPlugins={[remarkGfm]}>{text}</ReactMarkdown>
+                            </p>
                             <h3>Boje:</h3>
                             <ul>
                                 {product.colors.map((p) => (
