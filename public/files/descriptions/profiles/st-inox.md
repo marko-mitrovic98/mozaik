@@ -1,0 +1,1 @@
+INOX stepenišni profil postavlja se pri ugradnji keramike debljine 12mm.

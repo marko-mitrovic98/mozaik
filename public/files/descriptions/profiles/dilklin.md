@@ -1,0 +1,1 @@
+U sredini je meki PVC deo koji apsorbuje eventualne dilatacije i pomeranja poda, dok je spoljni sloj izradjen od tvrdog PVCa.

@@ -1,0 +1,1 @@
+PVC profil za dilataciju po horizontali za debljinu keramike od 8mm-10mm.
