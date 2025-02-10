@@ -48,6 +48,10 @@
             margin: 30px 10px;
             overflow: hidden;
 
+            @media (max-width:$md) {
+                width: 40%;
+            }
+
             [class*='card-'] {
                 width: 100%;
                 display: flex;

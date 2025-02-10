@@ -113,7 +113,7 @@ export const Shop = () => {
                             </div>
                         </div>
                     </div>
-                </section>                
+                </section>
                 <Footer />
             </>
         );

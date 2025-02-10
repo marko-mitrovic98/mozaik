@@ -38,6 +38,7 @@
         align-items: center;
 
         @media (max-width:$md) {
+            width: 33%;
           &:last-child{
             margin-bottom: 50px;
           }
@@ -46,18 +47,32 @@
         img {
             height: 100px;
             margin-bottom: 20px;
+
+            @media (max-width:$md){
+                height: 60px;
+            }
         }
 
         h1 {
             @include font($raleway, 27px, 400);
             color: $secondary-color;
             margin: 10px 0 20px;
+
+            @media (max-width:$md){
+                font-size: 20px;
+                text-align: center;
+            }
         }
 
         p {
             @include font($open-sans, 16px, 400);
             color: $dark-color;
             text-align: center;
+
+            @media (max-width:$md){
+                font-size: 14px;
+                padding-bottom: 50px;
+            }
         }
     }
 }

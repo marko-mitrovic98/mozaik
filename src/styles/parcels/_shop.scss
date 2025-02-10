@@ -6,13 +6,13 @@
 .section-shop {
     max-width: 100vw;
     .page-row {
-        min-height: 100vh;
+        min-height: calc(100vh - 70.8px);
 
         .sidebar {
             display: flex;
             flex-direction: column;
             padding: 30px;
-            height: 100vh;
+            height: calc(100vh - 70.8px);
             overflow-y: scroll;
 
             @media (max-width: $lg) {
@@ -209,7 +209,7 @@
             }
 
             .product-list {
-                height: 90vh;
+                height: calc(100vh - 70.8px);
                 overflow-y: scroll;
                 align-self: flex-start;
                 display: flex;
