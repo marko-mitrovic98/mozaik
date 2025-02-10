@@ -107,3 +107,16 @@
     }
 }
 
+.swal2-popup {
+    background-color: $background-color !important;
+    border: 3px solid $secondary-color !important;
+}
+.swal2-title {
+    @include font($open-sans, 24px, 400);
+    color: $primary-color;
+}
+.swal2-confirm {
+    background-color: $primary-color !important;
+    color: $heading-color !important;
+    border-radius: 8px !important;
+}

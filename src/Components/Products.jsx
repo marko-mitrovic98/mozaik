@@ -10,7 +10,7 @@ export const Products = () => {
                         <div className="row">
                             <ProductsCard title="Keramika" description="Najraznovrsniji dizajn najkvalitetnijih pločica za vaš dom" category="ceramic-tiles" />
                             <ProductsCard title="Profili" description="Ukrasite ivice najkvalitetnijim profilima na tržištu" category="profiles" />
-                            <ProductsCard title="Garnisne" description="Garnišne najmodernijeg dizajna" category="garrison" />
+                            <ProductsCard title="Garnisne" description="Garnišne najmodernijeg dizajna za vaše zavese" category="garrison" />
                             <ProductsCard title="Materijali" description="Materijali koji omogućavaju majstorima lakši život" category="materials" />
                             <ProductsCard title="Vrata" description="Najkvalitetnija vrata domaće proizvodnje" category="doors" />
                             <ProductsCard title="Laminat" description="Laminat po svačijoj želji" category="laminate" />

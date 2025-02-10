@@ -114,7 +114,6 @@ export const Shop = () => {
                         </div>
                     </div>
                 </section>
-                <Footer />
             </>
         );
     }

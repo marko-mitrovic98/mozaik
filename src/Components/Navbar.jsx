@@ -22,7 +22,7 @@ export const Navbar = () => {
                 <ul className={`nav-links ${isMobileMenuOpen ? 'mobile' : ''}`}>
                     <li>
                         <Link to="/" className="navLink">
-                            Pocetna
+                            Početna
                         </Link>
                     </li>
                     <li className="dropdown" onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>

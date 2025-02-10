@@ -1,11 +1,40 @@
 import React, { useEffect } from 'react';
 import { Navbar } from '../Components/Navbar.jsx';
 import { Footer } from '../Components/Footer.jsx';
+import Swal from 'sweetalert2';
 
 export const ContactPage = () => {
+    const [result, setResult] = React.useState('');
     useEffect(() => {
-        document.title = "Kontakt";
+        document.title = 'Kontakt';
     }, []);
+
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        setResult('Sending....');
+        const formData = new FormData(event.target);
+
+        formData.append('access_key', '925b0772-4771-403a-8093-5a1e469c7d43');
+
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData,
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            Swal.fire({
+                title: "Vaša poruka je uspešno poslata",
+                icon: "success"
+              });
+            setResult('Form Submitted Successfully');
+            event.target.reset();
+        } else {
+            console.log('Error', data);
+            setResult(data.message);
+        }
+    };
 
     return (
         <>
@@ -68,37 +97,36 @@ export const ContactPage = () => {
             <section className="section-contactPartners">
                 <div className="row">
                     <h1>Naši partneri</h1>
-                    </div>
-                    <div className="row">
-                        <img src="/assets/partners/zorka.png" alt="zorka keramika" />
-                        <img src="/assets/partners/kanjiza.png" alt="kanjiza keramika" />
-                        <img src="/assets/partners/ornament.png" alt="ornament keramika" />
-                    </div>
-                    <div className="row">
-                        <img src="/assets/partners/balkania.png" alt="balkania keramika" />
-                        <img src="/assets/partners/minotti.png" alt="minotti" />
-                        <img src="/assets/partners/nordiker.png" alt="nordiker" />
-                        <h2>fontana</h2>
-                    </div>
-                    <div className="row">
-                        <img src="/assets/partners/europrofil.png" alt="europrofil" />
-                        <img src="/assets/partners/maric.png" alt="vrata maric" />
-                        <img src="/assets/partners/pinoles.png" alt="pinoles laminat" />
-                    </div>
-                    <div className="row">
-                        <img src="/assets/partners/maxima.png" alt="maxima" />
-                        <img src="/assets/partners/mapei.png" alt="mapei" />
-                        <img src="/assets/partners/rofix.png" alt="rofix" />
-                        <img src="/assets/partners/beorol.png" alt="beorol" />
-                        <img src="/assets/partners/abs.png" alt="abs" />
-                    </div>
+                </div>
+                <div className="row">
+                    <img src="/assets/partners/zorka.png" alt="zorka keramika" />
+                    <img src="/assets/partners/kanjiza.png" alt="kanjiza keramika" />
+                    <img src="/assets/partners/ornament.png" alt="ornament keramika" />
+                </div>
+                <div className="row">
+                    <img src="/assets/partners/balkania.png" alt="balkania keramika" />
+                    <img src="/assets/partners/minotti.png" alt="minotti" />
+                    <img src="/assets/partners/nordiker.png" alt="nordiker" />
+                    <h2>fontana</h2>
+                </div>
+                <div className="row">
+                    <img src="/assets/partners/europrofil.png" alt="europrofil" />
+                    <img src="/assets/partners/maric.png" alt="vrata maric" />
+                    <img src="/assets/partners/pinoles.png" alt="pinoles laminat" />
+                </div>
+                <div className="row">
+                    <img src="/assets/partners/maxima.png" alt="maxima" />
+                    <img src="/assets/partners/mapei.png" alt="mapei" />
+                    <img src="/assets/partners/rofix.png" alt="rofix" />
+                    <img src="/assets/partners/beorol.png" alt="beorol" />
+                    <img src="/assets/partners/abs.png" alt="abs" />
+                </div>
             </section>
             <section className="section-contactForm">
                 <div className="container">
                     <div className="row">
                         <h2>Pošalji nam poruku</h2>
-                        <h3>Upit trenutno nije u funkciji</h3>
-                        <form action="submit">
+                        <form action="submit" onSubmit={onSubmit}>
                             <input type="text" id="name" name="name" placeholder="Ime i Prezime" required />
 
                             <input type="email" id="email" name="email" placeholder="E-mail" required />
