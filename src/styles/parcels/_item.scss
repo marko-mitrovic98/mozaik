@@ -10,16 +10,22 @@
         justify-content: center;
         background-color: $light2-color;
         padding: 0;
+        height: 800px;
+
+        @media (max-width: $lg) {
+            height: 400px;
+        }
 
         img {
-            height: 800px;
-            width: auto;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
 
-            @media (max-width:$lg) {
-                height: 400px;
+            @media (max-width: $lg) {
+                height: auto;
             }
-        }    
-        
+        }
+
         div[class*='arrow-'] {
             top: 45%;
             user-select: none;
@@ -30,7 +36,7 @@
             color: $primary-color;
             background-color: $background-color;
 
-            &:hover{
+            &:hover {
                 background-color: $primary-color;
                 color: $background-color;
                 cursor: pointer;
@@ -39,11 +45,11 @@
         }
 
         .arrow-left {
-            left: 0;                    
+            left: 0;
         }
 
         .arrow-right {
-            right: 0;                   
+            right: 0;
         }
     }
 
@@ -57,7 +63,7 @@
             color: $secondary-color;
             margin: 50px 10px 20px;
 
-            @media (max-width:$lg) {
+            @media (max-width: $lg) {
                 font-size: 40px;
             }
         }
@@ -68,7 +74,7 @@
             color: $subhead-color;
             margin: 0px 10px 20px;
 
-            @media (max-width:$lg) {
+            @media (max-width: $lg) {
                 font-size: 20px;
             }
         }
@@ -79,7 +85,7 @@
             color: $secondary-color;
             margin: 0px 10px 20px;
 
-            @media (max-width:$lg) {
+            @media (max-width: $lg) {
                 font-size: 18px;
             }
         }
@@ -90,7 +96,7 @@
             color: $primary-color;
             margin: 0px 10px 50px;
 
-            @media (max-width:$lg) {
+            @media (max-width: $lg) {
                 font-size: 60px;
             }
         }
