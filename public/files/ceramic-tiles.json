@@ -259,7 +259,7 @@
         "size": "30x60",
         "description": "river3060",
         "colors": ["bež"],
-        "price": "1620",
+        "price": "1540",
         "cardPicture": "riverbiege3060.jpg",
         "pictures": ["riverbiege3060.jpg"]
     },
@@ -271,7 +271,7 @@
         "size": "30x60",
         "description": "river3060",
         "colors": ["siva"],
-        "price": "1620",
+        "price": "1540",
         "cardPicture": "rivergrey3060.jpg",
         "pictures": ["rivergrey3060.jpg"]
     },
@@ -307,7 +307,7 @@
         "size": "60x60",
         "description": "river6060",
         "colors": ["siva"],
-        "price": "17800",
+        "price": "1780",
         "cardPicture": "riverdarkgrey6060.jpg",
         "pictures": ["riverdarkgrey6060.jpg"]
     },
@@ -355,7 +355,7 @@
         "size": "30x60",
         "description": "marvel3060",
         "colors": ["siva"],
-        "price": "1360",
+        "price": "1780",
         "cardPicture": "apolondark3060.jpg",
         "pictures": ["apolondark3060.jpg", "apolon2.jpg"]
     },
@@ -617,7 +617,7 @@
         "size": "30x60",
         "description": "jupiter3060",
         "colors": ["bela"],
-        "price": "1320",
+        "price": "1540",
         "cardPicture": "jupiterice3060.jpg",
         "pictures": ["jupiterice3060.jpg", "jupiter2.jpg", "jupiter3.jpg", "jupiter5.jpg", "jupiter6.jpg", "jupiter7.jpg"]
     },
@@ -641,7 +641,7 @@
         "size": "30x60",
         "description": "jupiter3060",
         "colors": ["siva"],
-        "price": "1320",
+        "price": "1540",
         "cardPicture": "jupiterdark3060.jpg",
         "pictures": ["jupiterdark3060.jpg", "jupiter2.jpg", "jupiter3.jpg", "jupiter5.jpg", "jupiter6.jpg", "jupiter7.jpg"]
     },
@@ -665,7 +665,7 @@
         "size": "30x60",
         "description": "jupiter3060",
         "colors": ["bež"],
-        "price": "1320",
+        "price": "1540",
         "cardPicture": "jupiterbiege3060.jpg",
         "pictures": ["jupiterbiege3060.jpg", "jupiter1.jpg", "jupiter4.jpg"]
     },
