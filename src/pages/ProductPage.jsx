@@ -5,9 +5,12 @@ import { useParams } from 'react-router-dom';
 import { Loading } from '../Components/Loading';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import Swal from 'sweetalert2';
+import { useCart } from '../context/CartContext.jsx';
 
 export const ProductPage = () => {
     const { shop, id, name } = useParams();
+    const { addItem } = useCart();
     const [loading, setLoading] = useState(true);
     const [increment, SetIncrement] = useState(0);
     const path = `/files/${shop}.json`;
@@ -80,6 +83,23 @@ export const ProductPage = () => {
                                 {product.category} - {product.manufacturer}
                             </h2>
                             <h4>{product.price}.00</h4>
+                            <button
+                                type="button"
+                                class="add-to-cart-btn"
+                                onClick={() => {
+                                    addItem(product, shop);
+                                    Swal.fire({
+                                        toast: true,
+                                        position: 'top-end',
+                                        icon: 'success',
+                                        title: 'Dodato u korpu',
+                                        showConfirmButton: false,
+                                        timer: 1500,
+                                    });
+                                }}
+                            >
+                                Dodaj u korpu
+                            </button>
                             <h3>Opis Proizvoda</h3>
                             <p>
                                 <ReactMarkdown remarkPlugins={[remarkGfm]}>{text}</ReactMarkdown>

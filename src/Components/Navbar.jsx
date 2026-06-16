@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useCart } from '../context/CartContext.jsx';
 
 export const Navbar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const { count } = useCart();
 
     const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
     const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -66,6 +69,12 @@ export const Navbar = () => {
                     <li>
                         <Link to="/contact" className="navLink">
                             KONTAKT
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/cart" className="cart-link">
+                            <ShoppingCartIcon fontSize="small" />
+                            {count > 0 && <span className="cart-badge">{count}</span>}
                         </Link>
                     </li>
                 </ul>
