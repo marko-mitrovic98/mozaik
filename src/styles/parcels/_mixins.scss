@@ -1,7 +1,14 @@
+// Three weights are loaded: 200 / 500 / 900. Snap the authored weight: anything < 500
+// stays ExtraLight (200), anything >= 500 becomes Medium (500). Headings (h1-h6) are
+// forced to Black (900) by a global rule that overrides the 500 set here.
 @mixin font($font, $font-size, $font-weight) {
     font-family: $font;
     font-size: $font-size;
-    font-weight: $font-weight;
+    @if type-of($font-weight) == 'number' and $font-weight >= 500 {
+        font-weight: 500;
+    } @else {
+        font-weight: 200;
+    }
 }
 
 @mixin stroke($color, $stroke-color) {

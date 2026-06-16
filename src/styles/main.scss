@@ -14,6 +14,7 @@
 @use 'parcels/item' as *;
 @use 'parcels/aboutPage' as *;
 @use 'parcels/contactPage' as *;
+@use 'parcels/cart' as *;
 
 html {
     scroll-behavior: smooth;
@@ -21,6 +22,17 @@ html {
 
 body {
     background-color: $background-color;
+    font-family: $montserrat;
+    font-weight: 200;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 900 !important;
 }
 
 
